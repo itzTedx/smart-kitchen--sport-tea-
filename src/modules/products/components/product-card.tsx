@@ -4,7 +4,6 @@ import { IconShoppingCart } from "@/assets/icons/shopping-cart";
 import { Button } from "@/components/ui/button";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Product } from "@/data/product";
-import { slugify } from "@/lib/utils";
 
 interface Props {
   data: Product;
@@ -17,7 +16,7 @@ export const ProductCard = ({ data }: Props) => {
       className="group relative overflow-hidden rounded-xl border bg-white p-7 shadow-md shadow-secondary/5"
       key={data.id}
     >
-      <Link className="absolute inset-0 z-20" href={`/products/${slugify(data.title)}`} />
+      <Link className="absolute inset-0 z-20" href={`/products/${data.slug}`} />
 
       <header className="mb-6">
         <h3 className="font-moret text-2xl" id={`product-title-${data.id}`}>
@@ -40,7 +39,7 @@ export const ProductCard = ({ data }: Props) => {
       </div>
 
       <Button aria-label={`Add ${data.title} to cart`} asChild className="relative z-99 w-full justify-between">
-        <Link href={`/products/${slugify(data.title)}`}>
+        <Link href={`/products/${data.slug}`}>
           Shop Now{" "}
           <div aria-hidden="true" className="flex size-8 items-center justify-center rounded-full bg-white sm:size-10">
             <IconShoppingCart className="size-4 text-secondary sm:size-5" />

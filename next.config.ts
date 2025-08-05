@@ -26,29 +26,6 @@ const nextConfig: NextConfig = {
     ],
   },
 
-  // Turbopack configuration (stable)
-  turbopack: {
-    rules: {
-      // Optimize image loading
-      "*.jpg": {
-        loaders: ["@vercel/turbopack-swc-loader"],
-        as: "*.jpg",
-      },
-      "*.png": {
-        loaders: ["@vercel/turbopack-swc-loader"],
-        as: "*.png",
-      },
-      "*.webp": {
-        loaders: ["@vercel/turbopack-swc-loader"],
-        as: "*.webp",
-      },
-      "*.avif": {
-        loaders: ["@vercel/turbopack-swc-loader"],
-        as: "*.avif",
-      },
-    },
-  },
-
   // Compression settings
   compress: true,
 
