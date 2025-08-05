@@ -5,9 +5,10 @@ import { IconLab } from "@/assets/icons/lab";
 import { IconEarthLeaf, IconLeaf, IconLeaf2 } from "@/assets/icons/leaf";
 import { IconMountain } from "@/assets/icons/mountains";
 import { IconTeaCup2 } from "@/assets/icons/tea-cup";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { BREWING_STEPS } from "@/data/constants";
+import { BREWING_STEPS, FAQS } from "@/data/constants";
 import { type Product, products } from "@/data/product";
 import { ProductCard } from "@/modules/products/components/product-card";
 import { HomeFeatures } from "@/modules/products/sections/features";
@@ -162,6 +163,41 @@ export default function Home() {
           <Image alt="Brewing Steps" className="object-cover" fill src="/images/brewing-bg.jpg" />
         </div>
       </section>
+      <section className="container max-w-7xl pb-32">
+        <div className="grid grid-cols-3 gap-3">
+          <div className="flex flex-col gap-3">
+            <h2 className="text-3xl text-brand-foreground">
+              Frequently
+              <br />
+              <span className="font-moret font-semibold text-5xl text-secondary"> Asked Questions</span>
+            </h2>
+          </div>
+          <div className="col-span-2 grid gap-3">
+            <Accordion className="w-full space-y-2" defaultValue="01" type="single">
+              {FAQS.map((item) => (
+                <AccordionItem
+                  className="rounded-md border border-secondary-hover/40 bg-secondary-foreground/50 px-4 py-1 outline-none last:border-b has-focus-visible:border-ring has-focus-visible:ring-[3px] has-focus-visible:ring-ring/50"
+                  key={item.id}
+                  value={item.id}
+                >
+                  <AccordionTrigger className="py-2 font-medium text-secondary leading-6 hover:no-underline focus-visible:ring-0">
+                    <div className="flex items-center gap-4 text-xl">
+                      <span className="text-secondary/60">{item.id}</span>
+                      {item.title}
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-2 pl-10 text-secondary-muted text-xl">
+                    {item.content}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
+      <footer className="bg-secondary p-3 text-center text-secondary-foreground">
+        <h5>2025 © Copyright, Sport Tea LLC.</h5>
+      </footer>
     </main>
   );
 }
