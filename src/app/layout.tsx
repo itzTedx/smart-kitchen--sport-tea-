@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import { denim, moret } from "@/assets/fonts";
+import { helvetica, moret } from "@/assets/fonts";
 import { Cta } from "@/components/layout/cta";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("antialiased", moret.variable, denim.className)}>
+      <body className={cn("antialiased", moret.variable, helvetica.className)}>
         <Navbar />
         {children}
         <Cta />

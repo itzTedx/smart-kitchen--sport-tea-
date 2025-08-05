@@ -5,8 +5,6 @@ import { BrewingGuide } from "@/modules/home/sections/brewing-guide";
 import { HomeFeatures } from "@/modules/home/sections/features";
 import { HomeHero } from "@/modules/home/sections/hero";
 import { SignatureCollection } from "@/modules/home/sections/signature-collection";
-import { SportTeaDifference } from "@/modules/home/sections/sporttea-difference";
-import { WhyChooseUs } from "@/modules/home/sections/why-choose-us";
 
 export default function Home() {
   const data: Product[] = products;
@@ -19,8 +17,6 @@ export default function Home() {
       <AboutSections />
       <BrewingGuide />
       <FAQ />
-      <WhyChooseUs />
-      <SportTeaDifference />
     </main>
   );
 }

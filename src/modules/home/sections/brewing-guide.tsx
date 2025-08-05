@@ -4,25 +4,27 @@ import { BREWING_STEPS } from "@/data/constants";
 
 export function BrewingGuide() {
   return (
-    <section className="container max-w-7xl pb-32">
-      <div className="relative overflow-hidden rounded-3xl p-9">
-        <h2 className="relative z-10 text-center font-moret text-5xl text-primary-foreground">
+    <section className="container max-w-7xl pb-16 md:pb-32">
+      <div className="relative overflow-hidden rounded-2xl p-7 md:rounded-3xl md:p-9">
+        <h2 className="relative z-10 text-balance text-center font-moret text-3xl text-primary-foreground md:text-4xl lg:text-5xl">
           How to Brew the Perfect Cup
         </h2>
-        <ul className="relative z-10 mt-6 grid grid-cols-5 gap-3 text-white">
+        <ul className="relative z-10 mt-4 grid grid-cols-2 gap-3 text-white sm:grid-cols-2 md:mt-6 md:gap-4 lg:grid-cols-5">
           {BREWING_STEPS.map((step, i) => (
             <li
-              className="inset-shadow-[0_6px_12px_hsla(0,0%,100%,0.25)] flex flex-col gap-2 rounded-xl border-white/30 border-t bg-gradient-to-b from-white/10 to-white/30 p-4 backdrop-blur-lg"
+              className="inset-shadow-[0_6px_12px_hsla(0,0%,100%,0.25)] flex flex-col gap-2 rounded-xl border-white/30 border-t bg-gradient-to-b from-white/10 to-white/30 p-3 backdrop-blur-lg md:p-4"
               key={step.title}
             >
-              <h3 className="text-white/80 text-xl">
+              <h3 className="text-lg text-white/80 md:text-xl">
                 <span className="sr-only">Step</span> 0{i + 1}
               </h3>
-              <p className="mt-6 text-balance font-medium text-lg">{step.description}</p>
+              <p className="mt-4 text-balance font-medium text-sm md:mt-6 md:text-base lg:text-lg">
+                {step.description}
+              </p>
             </li>
           ))}
         </ul>
-        <div className="absolute inset-0 z-1 bg-gradient-to-b from-foreground/30 to-foreground/10" />
+        <div className="absolute inset-0 z-1 bg-gradient-to-b from-foreground/50 to-foreground/10" />
         <Image alt="Brewing Steps" className="object-cover" fill src="/images/brewing-bg.jpg" />
       </div>
     </section>

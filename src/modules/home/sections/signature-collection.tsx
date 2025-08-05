@@ -9,28 +9,30 @@ interface SignatureCollectionProps {
 
 export function SignatureCollection({ products }: SignatureCollectionProps) {
   return (
-    <section className="container max-w-7xl pb-32">
+    <section className="container max-w-7xl pb-16 md:pb-32">
       <div>
-        <div className="flex items-center justify-between gap-3">
-          <h2 className="text-3xl">
+        <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
+          <h2 className="text-2xl sm:text-3xl">
             Explore Our
             <br />
-            <span className="font-moret font-semibold text-5xl text-secondary">Signature Collection</span>
+            <span className="font-moret font-semibold text-3xl text-secondary sm:text-4xl md:text-5xl">
+              Signature Collection
+            </span>
           </h2>
-          <Button className="gap-6" variant="outline">
-            Explore Collections
+          <Button className="w-full justify-between gap-3 sm:w-auto sm:gap-6" variant="outline">
+            <span>Explore Collections</span>
             <div className="flex size-10 items-center justify-center rounded-full bg-secondary">
-              <IconArrowRight className="size-5 text-secondary-foreground" />
+              <IconArrowRight className="size-4 text-secondary-foreground sm:size-5" />
             </div>
           </Button>
         </div>
-        <p className="max-w-md">
+        <p className="mt-4 max-w-md sm:mt-0">
           Whether you sip, stir, brew, or cook — SportTea offers a range of premium natural products to elevate your
           daily rituals.
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-3 pt-9">
+      <div className="grid grid-cols-1 gap-3 pt-6 sm:grid-cols-2 sm:pt-9 lg:grid-cols-3">
         {products.map((item) => (
           <ProductCard data={item} key={item.id} />
         ))}
