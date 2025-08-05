@@ -6,7 +6,7 @@ import { useAtom } from "jotai";
 import { ShoppingCart } from "lucide-react";
 
 import { Product } from "@/data/product";
-import { addToCartAtom, cartAtom } from "@/lib/cart";
+import { addToCartAtom, isCartOpenAtom } from "@/lib/cart";
 
 import { Button } from "./ui/button";
 
@@ -16,13 +16,9 @@ interface AddToCartButtonProps {
 }
 
 export default function AddToCartButton({ product, className }: AddToCartButtonProps) {
-  const [cart] = useAtom(cartAtom);
   const [, addToCart] = useAtom(addToCartAtom);
+  const [, setIsCartOpen] = useAtom(isCartOpenAtom);
   const [isAdding, setIsAdding] = useState(false);
-
-  // Find current quantity in cart or default to 1
-  const cartItem = cart.find((item) => item.product.id === product.id);
-  const quantity = cartItem?.quantity || 1;
 
   const handleAddToCart = async () => {
     setIsAdding(true);
@@ -30,7 +26,8 @@ export default function AddToCartButton({ product, className }: AddToCartButtonP
     // Simulate a brief loading state
     await new Promise((resolve) => setTimeout(resolve, 300));
 
-    addToCart({ product, quantity });
+    addToCart({ product, quantity: 1 });
+    setIsCartOpen(true); // Open the cart after adding item
     setIsAdding(false);
   };
 

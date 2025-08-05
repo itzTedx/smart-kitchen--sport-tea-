@@ -8,6 +8,8 @@ export interface CartItem {
   quantity: number;
 }
 
+export const isCartOpenAtom = atom(false);
+
 // Use atomWithStorage for localStorage persistence
 export const cartAtom = atomWithStorage<CartItem[]>("sporttea-cart", []);
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { helvetica, moret } from "@/assets/fonts";
+import { CartSheet } from "@/components/cart-sheet";
 import { Cta } from "@/components/layout/cta";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
@@ -84,6 +85,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
           <Cta />
           <Footer />
+          <CartSheet />
         </CartProvider>
       </body>
     </html>

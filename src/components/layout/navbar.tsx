@@ -3,18 +3,21 @@
 import { useState } from "react";
 import Link from "next/link";
 
+import { useAtom } from "jotai";
 import { Menu } from "lucide-react";
 
 import { Logo } from "@/assets/logo";
 import CartIcon from "@/components/cart-icon";
-import { CartSheet } from "@/components/cart-sheet";
 import { NAV_LINKS } from "@/data/constants";
+import { isCartOpenAtom } from "@/lib/cart";
 
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "../ui/sheet";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const [, setIsCartOpen] = useAtom(isCartOpenAtom);
 
   return (
     <nav className="container sticky top-0 z-999 flex max-w-3xl items-center justify-between border-white border-b bg-white/70 px-3 py-2 backdrop-blur-xl md:top-3 md:rounded-full">
@@ -41,17 +44,16 @@ export const Navbar = () => {
       </nav>
 
       <div className="flex items-center gap-2">
-        <CartSheet>
-          <Button className="gap-2.5 pl-1 has-[>div>svg]:pr-5 max-md:h-10 md:gap-4" variant="cta">
-            <div
-              aria-hidden="true"
-              className="flex size-8 items-center justify-center rounded-full bg-white md:size-10"
-            >
-              <CartIcon className="size-4 text-secondary md:size-5" />
-            </div>
-            Cart
-          </Button>
-        </CartSheet>
+        <Button
+          className="gap-2.5 pl-1 has-[>div>svg]:pr-5 max-md:h-10 md:gap-4"
+          onClick={() => setIsCartOpen(true)}
+          variant="cta"
+        >
+          <div aria-hidden="true" className="flex size-8 items-center justify-center rounded-full bg-white md:size-10">
+            <CartIcon className="size-4 text-secondary md:size-5" />
+          </div>
+          Cart
+        </Button>
 
         {/* Mobile Menu Sheet */}
         <Sheet onOpenChange={setIsMenuOpen} open={isMenuOpen}>

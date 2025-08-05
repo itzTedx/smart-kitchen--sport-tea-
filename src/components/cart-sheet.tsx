@@ -8,23 +8,26 @@ import { ShoppingBag, Trash2, X } from "lucide-react";
 import CompactQuantitySelector from "@/components/compact-quantity-selector";
 import { Button } from "@/components/ui/button";
 import { OptimizedImage } from "@/components/ui/optimized-image";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { cartAtom, cartItemCountAtom, cartTotalAtom, clearCartAtom, removeFromCartAtom } from "@/lib/cart";
+import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
+import {
+  cartAtom,
+  cartItemCountAtom,
+  cartTotalAtom,
+  clearCartAtom,
+  isCartOpenAtom,
+  removeFromCartAtom,
+} from "@/lib/cart";
 
-interface CartSheetProps {
-  children: React.ReactNode;
-}
-
-export function CartSheet({ children }: CartSheetProps) {
+export function CartSheet() {
   const [cart] = useAtom(cartAtom);
   const [itemCount] = useAtom(cartItemCountAtom);
   const [total] = useAtom(cartTotalAtom);
   const [, removeFromCart] = useAtom(removeFromCartAtom);
   const [, clearCart] = useAtom(clearCartAtom);
+  const [isOpen, setIsOpen] = useAtom(isCartOpenAtom);
 
   return (
-    <Sheet>
-      <SheetTrigger asChild>{children}</SheetTrigger>
+    <Sheet onOpenChange={setIsOpen} open={isOpen}>
       <SheetContent className="w-full gap-0 sm:max-w-md">
         <SheetHeader className="border-b">
           <SheetTitle className="flex items-center gap-3">
