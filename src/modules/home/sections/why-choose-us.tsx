@@ -1,16 +1,13 @@
-import Image from "next/image";
-
 import { IconLab } from "@/assets/icons/lab";
 import { IconEarthLeaf, IconLeaf, IconLeaf2 } from "@/assets/icons/leaf";
 import { IconMountain } from "@/assets/icons/mountains";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Separator } from "@/components/ui/separator";
 
 export function WhyChooseUs() {
   return (
     <article className="relative flex flex-col justify-between overflow-hidden rounded-xl bg-white p-4 sm:p-6 lg:p-7">
-      <h4 className="text-nowrap bg-gradient-to-b from-secondary to-secondary/20 bg-clip-text text-center font-moret text-3xl text-transparent leading-none tracking-tighter sm:text-4xl md:text-5xl lg:text-[5.4rem]">
-        100% Organic
-      </h4>
+      <div />
       <div className="z-1 w-fit space-y-2 rounded-xl bg-gradient-to-b from-white/60 to-white/40 p-2 backdrop-blur-lg sm:space-y-3 sm:p-3">
         <div className="text-sm sm:text-base">Why choose us</div>
         <div className="space-y-3 rounded-lg bg-white p-3 sm:space-y-4 sm:p-4 lg:p-5">
@@ -50,10 +47,12 @@ export function WhyChooseUs() {
           </p>
         </div>
       </div>
-      <Image
+      <OptimizedImage
         alt="Nilgiri Hills tea estate showing organic tea cultivation and natural ingredients"
         className="object-cover object-bottom"
         fill
+        placeholder="sporttea"
+        quality="high"
         src="/images/features-hero.png"
       />
     </article>

@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { IconBrain } from "@/assets/icons/brain";
 import { IconLeaf } from "@/assets/icons/leaf";
 import { IconLocationPin } from "@/assets/icons/location-pin";
@@ -7,6 +5,7 @@ import { IconMountain } from "@/assets/icons/mountains";
 import { IconShoppingCart } from "@/assets/icons/shopping-cart";
 import { IconTeaCup } from "@/assets/icons/tea-cup";
 import { Button } from "@/components/ui/button";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Separator } from "@/components/ui/separator";
 
 import { FeatureCardBg } from "../../products/components/feature-card-bg";
@@ -151,10 +150,12 @@ export const HomeFeatures = () => {
               </p>
             </div>
           </div>
-          <Image
+          <OptimizedImage
             alt="Nilgiri Hills tea estate showing organic tea cultivation in the Blue Mountains of India"
             className="object-cover object-bottom"
             fill
+            placeholder="sporttea"
+            quality="high"
             src="/images/features-hero.png"
           />
         </article>

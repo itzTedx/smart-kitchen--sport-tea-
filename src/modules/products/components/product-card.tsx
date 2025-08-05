@@ -1,6 +1,5 @@
-import Image from "next/image";
-
 import { Button } from "@/components/ui/button";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Product } from "@/data/product";
 
 interface Props {
@@ -23,10 +22,12 @@ export const ProductCard = ({ data }: Props) => {
         </p>
       </header>
       <div className="relative size-80">
-        <Image
+        <OptimizedImage
           alt={`${data.title} - Premium organic tea product from SportTea`}
           className="object-contain"
           fill
+          placeholder="sporttea"
+          quality="high"
           src={data.image}
         />
       </div>

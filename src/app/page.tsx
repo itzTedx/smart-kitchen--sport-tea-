@@ -1,10 +1,28 @@
-import { FAQ } from "@/components/layout/faq";
+import dynamic from "next/dynamic";
+
 import { type Product, products } from "@/data/product";
-import { AboutSections } from "@/modules/home/sections/about-sections";
-import { BrewingGuide } from "@/modules/home/sections/brewing-guide";
 import { HomeFeatures } from "@/modules/home/sections/features";
 import { HomeHero } from "@/modules/home/sections/hero";
 import { SignatureCollection } from "@/modules/home/sections/signature-collection";
+
+// Lazy load non-critical components
+const LazyAboutSections = dynamic(
+  () => import("@/modules/home/sections/about-sections").then((mod) => ({ default: mod.AboutSections })),
+  {
+    loading: () => <div className="h-96 w-full animate-pulse bg-muted" />,
+  }
+);
+
+const LazyBrewingGuide = dynamic(
+  () => import("@/modules/home/sections/brewing-guide").then((mod) => ({ default: mod.BrewingGuide })),
+  {
+    loading: () => <div className="h-96 w-full animate-pulse bg-muted" />,
+  }
+);
+
+const LazyFAQ = dynamic(() => import("@/components/layout/faq").then((mod) => ({ default: mod.FAQ })), {
+  loading: () => <div className="h-96 w-full animate-pulse bg-muted" />,
+});
 
 export default function Home() {
   const data: Product[] = products;
@@ -14,14 +32,14 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "SportTea",
-    url: "https://sporttea.in",
-    logo: "https://sporttea.in/logo.svg",
+    url: "https://sporttea.com",
+    logo: "https://sporttea.com/logo.svg",
     description: "Premium organic tea and wellness products from the Nilgiri Hills",
     address: {
       "@type": "PostalAddress",
       addressCountry: "India",
     },
-    sameAs: ["https://facebook.in/sporttea", "https://twitter.in/sporttea", "https://instagram.in/sporttea"],
+    sameAs: ["https://facebook.com/sporttea", "https://twitter.com/sporttea", "https://instagram.com/sporttea"],
   };
 
   const productStructuredData = {
@@ -69,12 +87,15 @@ export default function Home() {
       />
 
       <main aria-label="SportTea Homepage" role="main">
+        {/* Critical components - load immediately */}
         <HomeHero />
         <HomeFeatures />
         <SignatureCollection products={data} />
-        <AboutSections />
-        <BrewingGuide />
-        <FAQ />
+
+        {/* Non-critical components - lazy load */}
+        <LazyAboutSections />
+        <LazyBrewingGuide />
+        <LazyFAQ />
       </main>
     </>
   );

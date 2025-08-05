@@ -8,29 +8,11 @@ import { Navbar } from "@/components/layout/navbar";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: {
-    default: "SportTea - Premium Organic Tea & Wellness Products | Nature's Essence, Boldly Brewed",
-    template: "%s | SportTea",
-  },
+  title: "SportTea - Premium Organic Tea & Wellness Products | Nature's Essence, Boldly Brewed",
   description:
-    "Discover high-altitude teas, healing herbs, and vibrant spices from the Nilgiri Hills. Ethically sourced, 100% organic tea products for wellness and vitality. Premium black tea, green tea, and herbal blends.",
-  keywords: [
-    "organic tea",
-    "premium tea",
-    "Nilgiri Hills tea",
-    "black tea",
-    "green tea",
-    "herbal tea",
-    "wellness products",
-    "organic tea leaves",
-    "pesticide-free tea",
-    "high-altitude tea",
-    "sport tea",
-    "tea collection",
-    "natural tea",
-    "pure tea",
-    "aromatic tea",
-  ],
+    "Discover premium organic tea from the pristine Nilgiri Hills. Shop our curated collection of black, green, and herbal teas. Free shipping on orders over $50. Experience nature's essence, boldly brewed.",
+  keywords:
+    "organic tea, premium tea, Nilgiri Hills tea, black tea, green tea, herbal tea, wellness products, high-altitude tea, pesticide-free tea",
   authors: [{ name: "SportTea" }],
   creator: "SportTea",
   publisher: "SportTea",
@@ -43,6 +25,31 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://sporttea.in",
+    siteName: "SportTea",
+    title: "SportTea - Premium Organic Tea & Wellness Products",
+    description:
+      "Discover premium organic tea from the pristine Nilgiri Hills. Shop our curated collection of black, green, and herbal teas.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "SportTea - Premium Organic Tea Collection",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SportTea - Premium Organic Tea & Wellness Products",
+    description:
+      "Discover premium organic tea from the pristine Nilgiri Hills. Shop our curated collection of black, green, and herbal teas.",
+    images: ["/og-image.jpg"],
+    creator: "@sporttea",
+  },
   robots: {
     index: true,
     follow: true,
@@ -54,48 +61,21 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://sporttea.in",
-    siteName: "SportTea",
-    title: "SportTea - Premium Organic Tea & Wellness Products",
-    description:
-      "Discover high-altitude teas, healing herbs, and vibrant spices from the Nilgiri Hills. 100% organic tea products for wellness and vitality.",
-    images: [
-      {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "SportTea - Premium Organic Tea Collection",
-      },
-    ],
+  verification: {
+    google: "your-google-verification-code",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "SportTea - Premium Organic Tea & Wellness Products",
-    description:
-      "Discover high-altitude teas, healing herbs, and vibrant spices from the Nilgiri Hills. 100% organic tea products.",
-    images: ["/images/twitter-image.jpg"],
-    creator: "@sporttea",
+  other: {
+    "theme-color": "#7296",
+    "color-scheme": "light dark",
   },
-
-  category: "Food & Beverage",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html className="scroll-smooth" lang="en">
       <head>
-        <link href="/favicon.ico" rel="icon" />
-        <link href="/apple-touch-icon.png" rel="apple-touch-icon" />
-        <link href="/manifest.json" rel="manifest" />
-        <meta content="#your-theme-color" name="theme-color" />
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        {/* Resource hints for performance optimization */}
+        <link href="https://sporttea.in" rel="dns-prefetch" />
       </head>
       <body className={cn("antialiased", moret.variable, helvetica.className)}>
         <Navbar />
