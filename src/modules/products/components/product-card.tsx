@@ -1,0 +1,29 @@
+import Image from "next/image";
+
+import { Button } from "@/components/ui/button";
+import { Product } from "@/data/product";
+
+interface Props {
+  data: Product;
+}
+export const ProductCard = ({ data }: Props) => {
+  return (
+    <div className="space-y-6 rounded-xl border bg-white p-7" key={data.id}>
+      <div>
+        <h3 className="font-moret text-2xl">{data.title}</h3>
+        <p className="text-lg">
+          ₹{data.price} / {data.unit}
+        </p>
+      </div>
+      <div className="relative size-80">
+        <Image alt={data.title} className="object-contain" fill src={data.image} />
+      </div>
+      <div className="grid grid-cols-2 gap-3">
+        <Button className="w-full">Shop Now</Button>
+        <Button className="w-full" variant="outline">
+          Learn More
+        </Button>
+      </div>
+    </div>
+  );
+};

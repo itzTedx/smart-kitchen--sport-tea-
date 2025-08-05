@@ -14,7 +14,7 @@
     ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
 
-  "cSpell.words": ["esbuild", "Foneflip", "nuqs", "sporttea", "turbopack", "ziron"],
+  "cSpell.words": ["esbuild", "Foneflip", "moret", "nuqs", "sporttea", "turbopack", "ziron"],
   "[typescriptreact]": {
     "editor.defaultFormatter": "biomejs.biome"
   }
