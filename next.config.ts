@@ -16,7 +16,6 @@ const nextConfig: NextConfig = {
 
   // Turbopack optimizations
   experimental: {
-    optimizeCss: true,
     // Optimize package imports for Turbopack
     optimizePackageImports: [
       "lucide-react",
