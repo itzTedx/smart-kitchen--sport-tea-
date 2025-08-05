@@ -5,6 +5,7 @@ import { helvetica, moret } from "@/assets/fonts";
 import { Cta } from "@/components/layout/cta";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
+import { CartProvider } from "@/components/providers/cart-provider";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -78,10 +79,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://sporttea.in" rel="dns-prefetch" />
       </head>
       <body className={cn("antialiased", moret.variable, helvetica.className)}>
-        <Navbar />
-        {children}
-        <Cta />
-        <Footer />
+        <CartProvider>
+          <Navbar />
+          {children}
+          <Cta />
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

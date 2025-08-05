@@ -1,31 +1,45 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useId } from "react";
 
+import { useAtom } from "jotai";
 import { ChevronDown, ChevronUp } from "lucide-react";
+
+import { Product } from "@/data/product";
+import { cartAtom, updateCartItemQuantityAtom } from "@/lib/cart";
 
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 
-export default function QuantitySelector() {
+interface QuantitySelectorProps {
+  product: Product;
+  className?: string;
+}
+
+export default function QuantitySelector({ product, className }: QuantitySelectorProps) {
   const id = useId();
-  const [quantity, setQuantity] = useState(1);
+  const [cart] = useAtom(cartAtom);
+  const [, updateCartItemQuantity] = useAtom(updateCartItemQuantityAtom);
+
+  // Find current quantity in cart or default to 1
+  const cartItem = cart.find((item) => item.product.id === product.id);
+  const quantity = cartItem?.quantity || 1;
 
   const increment = () => {
-    setQuantity((prev) => prev + 1);
+    updateCartItemQuantity({ productId: product.id, quantity: quantity + 1 });
   };
 
   const decrement = () => {
-    setQuantity((prev) => Math.max(1, prev - 1));
+    updateCartItemQuantity({ productId: product.id, quantity: Math.max(1, quantity - 1) });
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = Number.parseInt(e.target.value) || 1;
-    setQuantity(Math.max(1, value));
+    updateCartItemQuantity({ productId: product.id, quantity: Math.max(1, value) });
   };
 
   return (
-    <div className="relative">
+    <div className={`relative ${className || ""}`}>
       <Input
         className="peer w-28 ps-5 pe-8 text-center text-secondary [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
         id={id}

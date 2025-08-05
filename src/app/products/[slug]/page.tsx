@@ -1,9 +1,9 @@
 import { use } from "react";
 import { Metadata } from "next";
 
+import AddToCartButton from "@/components/add-to-cart-button";
 import { FAQ } from "@/components/layout/faq";
 import QuantitySelector from "@/components/quantity-selector";
-import { Button } from "@/components/ui/button";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Product, products } from "@/data/product";
 import { BrewingGuide } from "@/modules/home/sections/brewing-guide";
@@ -126,8 +126,8 @@ export default function ProductDetailPage({ params }: { params: Params }) {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <QuantitySelector />
-                  <Button className="flex-1">Add to Cart</Button>
+                  <QuantitySelector product={product} />
+                  <AddToCartButton className="flex-1" product={product} />
                 </div>
 
                 <div>
@@ -170,8 +170,8 @@ export default function ProductDetailPage({ params }: { params: Params }) {
                 <p className="whitespace-pre-line leading-relaxed">{product.overview}</p>
               </div>
               <div className="flex items-center gap-3">
-                <QuantitySelector />
-                <Button className="flex-1">Add to Cart</Button>
+                <QuantitySelector product={product} />
+                <AddToCartButton className="flex-1" product={product} />
               </div>
               <div>
                 <h2 className="mb-3 font-medium text-muted-foreground text-sm">Benefits</h2>

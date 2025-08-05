@@ -35,7 +35,7 @@ export function SignatureCollection({ products }: SignatureCollectionProps) {
             </Link>
           </Button>
         </div>
-        <p className="mt-4 max-w-md sm:mt-0">
+        <p className="mt-4 max-w-lg text-lg">
           Whether you sip, stir, brew, or cook — SportTea offers a range of premium natural products to elevate your
           daily rituals.
         </p>
