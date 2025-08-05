@@ -9,7 +9,7 @@ import { IconTeaCup } from "@/assets/icons/tea-cup";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
-import { FeatureCardBg } from "../components/feature-card-bg";
+import { FeatureCardBg } from "../../products/components/feature-card-bg";
 
 export const HomeFeatures = () => {
   return (
