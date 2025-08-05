@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { denim, moret } from "@/assets/fonts";
+import { Cta } from "@/components/layout/cta";
+import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { cn } from "@/lib/utils";
 
@@ -20,6 +22,8 @@ export default function RootLayout({
       <body className={cn("antialiased", moret.variable, denim.className)}>
         <Navbar />
         {children}
+        <Cta />
+        <Footer />
       </body>
     </html>
   );

@@ -49,3 +49,9 @@ export const FAQS = [
     content: "Yes — our teas taste great with or without milk.",
   },
 ];
+
+export const FOOTER = [
+  {
+    heading: "Products",
+  },
+];
