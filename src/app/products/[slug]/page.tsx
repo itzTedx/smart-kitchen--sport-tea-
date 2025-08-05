@@ -11,6 +11,13 @@ import { SignatureCollection } from "@/modules/home/sections/signature-collectio
 
 type Params = Promise<{ slug: string }>;
 
+// Generate static params for all products at build time
+export function generateStaticParams() {
+  return products.map((product) => ({
+    slug: product.slug,
+  }));
+}
+
 // Generate metadata for SEO
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { slug } = await params;
