@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import { IconShoppingCart } from "@/assets/icons/shopping-cart";
 import { Logo } from "@/assets/logo";
+import { NAV_LINKS } from "@/data/constants";
 import { cn } from "@/lib/utils";
 
 import { Button } from "../ui/button";
@@ -26,21 +27,17 @@ export const Navbar = () => {
       {/* Desktop Navigation */}
       <nav className="hidden items-center gap-9 md:flex">
         <ul className="flex items-center gap-4 font-medium">
-          <li>
-            <Link className="px-3 py-2" href="/">
-              Products
-            </Link>
-          </li>
-          <li>
-            <Link className="px-3 py-2" href="/">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link className="px-3 py-2" href="/">
-              Contact
-            </Link>
-          </li>
+          {NAV_LINKS.map((item) => (
+            <li key={item.label}>
+              {item.href ? (
+                <Link className="px-3 py-2 transition-colors hover:text-primary" href={item.href}>
+                  {item.label}
+                </Link>
+              ) : (
+                <button className="cursor-pointer px-3 py-2 transition-colors hover:text-primary">{item.label}</button>
+              )}
+            </li>
+          ))}
         </ul>
       </nav>
 
@@ -79,36 +76,29 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-full right-0 left-0 mt-2 rounded-lg border bg-white/95 shadow-lg backdrop-blur-xl backdrop-blur-xl md:hidden">
+        <div className="absolute top-full right-0 left-0 mt-2 rounded-lg border bg-white/95 shadow-lg backdrop-blur-xl md:hidden">
           <nav className="p-4">
             <ul className="flex flex-col gap-2 font-medium">
-              <li>
-                <Link
-                  className="block rounded-md px-3 py-2 transition-colors hover:bg-gray-100"
-                  href="/"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="block rounded-md px-3 py-2 transition-colors hover:bg-gray-100"
-                  href="/"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="block rounded-md px-3 py-2 transition-colors hover:bg-gray-100"
-                  href="/"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Contact
-                </Link>
-              </li>
+              {NAV_LINKS.map((item) => (
+                <li key={item.label}>
+                  {item.href ? (
+                    <Link
+                      className="block rounded-md px-3 py-2 transition-colors hover:bg-gray-100"
+                      href={item.href}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <button
+                      className="block cursor-pointer rounded-md px-3 py-2 transition-colors hover:bg-gray-100"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.label}
+                    </button>
+                  )}
+                </li>
+              ))}
             </ul>
           </nav>
         </div>

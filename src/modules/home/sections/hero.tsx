@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { IconLeaf } from "@/assets/icons/leaf";
 import { IconTeaCup2 } from "@/assets/icons/tea-cup";
@@ -32,11 +33,13 @@ export const HomeHero = () => {
           Discover high-altitude teas, healing herbs, and vibrant spices — ethically sourced and naturally powerful.
         </p>
       </div>
-      <Button aria-label="Explore our tea collections" className="text-sm sm:text-base">
-        Explore Collections
-        <div aria-hidden="true" className="flex size-8 items-center justify-center rounded-full bg-white sm:size-10">
-          <IconLeaf className="size-4 text-secondary sm:size-5" />
-        </div>
+      <Button aria-label="Explore our tea collections" asChild className="text-sm sm:text-base">
+        <Link href="/products">
+          Explore Collections
+          <div aria-hidden="true" className="flex size-8 items-center justify-center rounded-full bg-white sm:size-10">
+            <IconLeaf className="size-4 text-secondary sm:size-5" />
+          </div>
+        </Link>
       </Button>
 
       <div className="-mb-6 relative mt-6">

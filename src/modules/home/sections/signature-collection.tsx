@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { IconArrowRight } from "@/assets/icons/arrows";
 import { Button } from "@/components/ui/button";
 import { type Product } from "@/data/product";
@@ -21,13 +23,16 @@ export function SignatureCollection({ products }: SignatureCollectionProps) {
           </h2>
           <Button
             aria-label="View all tea collections"
+            asChild
             className="w-full justify-between gap-3 sm:w-auto sm:gap-6"
             variant="outline"
           >
-            <span>Explore Collections</span>
-            <div aria-hidden="true" className="flex size-10 items-center justify-center rounded-full bg-secondary">
-              <IconArrowRight className="size-4 text-secondary-foreground sm:size-5" />
-            </div>
+            <Link href="/products">
+              <span>Explore Collections</span>
+              <div aria-hidden="true" className="flex size-10 items-center justify-center rounded-full bg-secondary">
+                <IconArrowRight className="size-4 text-secondary-foreground sm:size-5" />
+              </div>
+            </Link>
           </Button>
         </div>
         <p className="mt-4 max-w-md sm:mt-0">
