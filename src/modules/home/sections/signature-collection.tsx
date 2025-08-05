@@ -9,19 +9,23 @@ interface SignatureCollectionProps {
 
 export function SignatureCollection({ products }: SignatureCollectionProps) {
   return (
-    <section className="container max-w-7xl pb-16 md:pb-32">
-      <div>
+    <section aria-labelledby="collection-heading" className="container max-w-7xl pb-16 md:pb-32">
+      <header>
         <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
-          <h2 className="text-2xl sm:text-3xl">
+          <h2 className="text-2xl sm:text-3xl" id="collection-heading">
             Explore Our
             <br />
             <span className="font-moret font-semibold text-3xl text-secondary sm:text-4xl md:text-5xl">
               Signature Collection
             </span>
           </h2>
-          <Button className="w-full justify-between gap-3 sm:w-auto sm:gap-6" variant="outline">
+          <Button
+            aria-label="View all tea collections"
+            className="w-full justify-between gap-3 sm:w-auto sm:gap-6"
+            variant="outline"
+          >
             <span>Explore Collections</span>
-            <div className="flex size-10 items-center justify-center rounded-full bg-secondary">
+            <div aria-hidden="true" className="flex size-10 items-center justify-center rounded-full bg-secondary">
               <IconArrowRight className="size-4 text-secondary-foreground sm:size-5" />
             </div>
           </Button>
@@ -30,11 +34,17 @@ export function SignatureCollection({ products }: SignatureCollectionProps) {
           Whether you sip, stir, brew, or cook — SportTea offers a range of premium natural products to elevate your
           daily rituals.
         </p>
-      </div>
+      </header>
 
-      <div className="grid grid-cols-1 gap-3 pt-6 sm:grid-cols-2 sm:pt-9 lg:grid-cols-3">
+      <div
+        aria-label="Premium tea collection products"
+        className="grid grid-cols-1 gap-3 pt-6 sm:grid-cols-2 sm:pt-9 lg:grid-cols-3"
+        role="list"
+      >
         {products.map((item) => (
-          <ProductCard data={item} key={item.id} />
+          <div key={item.id} role="listitem">
+            <ProductCard data={item} />
+          </div>
         ))}
       </div>
     </section>

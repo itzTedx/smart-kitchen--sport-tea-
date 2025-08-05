@@ -6,24 +6,38 @@ import { Product } from "@/data/product";
 interface Props {
   data: Product;
 }
+
 export const ProductCard = ({ data }: Props) => {
   return (
-    <div className="space-y-6 rounded-xl border bg-white p-7" key={data.id}>
-      <div>
-        <h3 className="font-moret text-2xl">{data.title}</h3>
+    <article
+      aria-labelledby={`product-title-${data.id}`}
+      className="space-y-6 rounded-xl border bg-white p-7"
+      key={data.id}
+    >
+      <header>
+        <h3 className="font-moret text-2xl" id={`product-title-${data.id}`}>
+          {data.title}
+        </h3>
         <p className="text-lg">
           ₹{data.price} / {data.unit}
         </p>
-      </div>
+      </header>
       <div className="relative size-80">
-        <Image alt={data.title} className="object-contain" fill src={data.image} />
+        <Image
+          alt={`${data.title} - Premium organic tea product from SportTea`}
+          className="object-contain"
+          fill
+          src={data.image}
+        />
       </div>
       <div className="grid grid-cols-2 gap-3">
-        <Button className="w-full">Shop Now</Button>
-        <Button className="w-full" variant="outline">
+        <Button aria-label={`Add ${data.title} to cart`} className="w-full">
+          Shop Now
+        </Button>
+        <Button aria-label={`Learn more about ${data.title}`} className="w-full" variant="outline">
           Learn More
         </Button>
       </div>
-    </div>
+    </article>
   );
 };
