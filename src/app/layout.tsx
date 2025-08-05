@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import { helvetica, suisse } from "@/assets/fonts";
+import { denim, moret } from "@/assets/fonts";
 import { Navbar } from "@/components/layout/navbar";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${helvetica.className} ${suisse.variable} antialiased`}>
+      <body className={cn("antialiased", moret.variable, denim.className)}>
         <Navbar />
         {children}
       </body>

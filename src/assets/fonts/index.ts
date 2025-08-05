@@ -21,27 +21,31 @@ export const helvetica = localFont({
   ],
 });
 
-export const suisse = localFont({
-  variable: "--font-suisse",
+export const moret = localFont({
+  variable: "--font-moret",
   display: "swap",
   preload: true,
   fallback: ["system-ui", "arial"],
   src: [
     {
-      weight: "300",
-      path: "./suisse/suisse-intl-300.woff2",
+      weight: "600",
+      path: "./moret/Moret-Semibold.otf",
     },
+  ],
+});
+export const denim = localFont({
+  variable: "--font-denim",
+  display: "swap",
+  preload: true,
+  fallback: ["system-ui", "arial"],
+  src: [
     {
       weight: "400",
-      path: "./suisse/suisse-intl-400.woff2",
+      path: "./denim/denim-regular.woff2",
     },
     {
-      weight: "600",
-      path: "./suisse/suisse-intl-600.woff2",
-    },
-    {
-      weight: "700",
-      path: "./suisse/suisse-intl-700.woff2",
+      weight: "500",
+      path: "./denim/denim-medium.woff2",
     },
   ],
 });
