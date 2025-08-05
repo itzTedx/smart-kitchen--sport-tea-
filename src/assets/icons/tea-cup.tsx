@@ -46,3 +46,57 @@ export const IconTeaCup = (props: React.SVGProps<SVGSVGElement>) => {
     </svg>
   );
 };
+
+export const IconTeaCup2 = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg {...props} fill="none" height="16" viewBox="0 0 17 16" width="17" xmlns="http://www.w3.org/2000/svg">
+      <g clipPath="url(#clip0_158_82)">
+        <path
+          d="M3.83337 6H13.1667V9.11111C13.1667 11.5644 11.1756 13.5556 8.72226 13.5556H8.27782C5.82449 13.5556 3.83337 11.5644 3.83337 9.11111V6Z"
+          fill="currentColor"
+          opacity="0.4"
+        />
+        <path
+          d="M8.27779 0.666626C8.25823 1.22751 8.13023 1.89596 7.68045 2.4444C7.37201 2.82129 7.11512 2.8924 6.81912 3.26396C6.71068 3.39996 6.60668 3.5644 6.51868 3.76529"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
+        />
+        <path
+          d="M10.7222 2.44446C10.7089 2.78135 10.6235 3.18224 10.324 3.51112C10.2111 3.63557 10.1089 3.70401 10.0067 3.77779"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
+        />
+        <path
+          d="M3.83337 6H13.1667V9.11111C13.1667 11.5644 11.1756 13.5556 8.72226 13.5556H8.27782C5.82449 13.5556 3.83337 11.5644 3.83337 9.11111V6Z"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
+        />
+        <path
+          d="M14.0556 13.5555H2.94446"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
+        />
+        <path
+          d="M13.1667 6H14.0556C15.0378 6 15.8334 6.792 15.8334 7.77778C15.8334 8.76356 15.0378 9.55556 14.0556 9.55556H13.1667"
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_158_82">
+          <rect fill="white" height="16" transform="translate(0.5)" width="16" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+};

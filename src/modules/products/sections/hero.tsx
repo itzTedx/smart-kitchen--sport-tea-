@@ -1,12 +1,19 @@
 import Image from "next/image";
 
 import { IconLeaf } from "@/assets/icons/leaf";
+import { IconTeaCup2 } from "@/assets/icons/tea-cup";
 import { Button } from "@/components/ui/button";
 
 export const HomeHero = () => {
   return (
     <section className="relative h-screen space-y-6 py-20 text-center">
       <div className="space-y-3">
+        <div className="mx-auto flex max-w-fit items-center gap-2 rounded-full bg-white py-1 pr-4 pl-1 text-secondary">
+          <div className="flex size-6 items-center justify-center rounded-full bg-secondary/15">
+            <IconTeaCup2 className="size-4 text-secondary" />
+          </div>
+          <span>Sip the wellness</span>
+        </div>
         <h1 className="font-moret font-semibold text-7xl text-brand-foreground">
           Nature’s Essence,
           <br />
