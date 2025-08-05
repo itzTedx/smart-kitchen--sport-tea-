@@ -46,6 +46,6 @@ export const FOOTER = [createFooterSection("Products")];
 
 export const NAV_LINKS = [
   createNavItem("Products", "/products"),
-  createNavItem("About", "#about"),
+  createNavItem("About", "/#about"),
   createNavItem("Contact"),
 ];

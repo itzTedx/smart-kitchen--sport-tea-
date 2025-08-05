@@ -63,7 +63,11 @@ export const Footer = () => {
             <p className="text-end text-secondary-foreground/40 text-xs md:text-center">
               Website designed & <br />
               developed by{" "}
-              <Link href="https://www.zironmedia.com" target="_blank">
+              <Link
+                className="underline transition-colors hover:text-secondary-foreground"
+                href="https://www.zironmedia.com"
+                target="_blank"
+              >
                 Ziron Media
               </Link>
             </p>
