@@ -35,6 +35,7 @@ export function BrewingGuide() {
           alt="Tea brewing process showing steeping tea leaves in hot water"
           className="object-cover"
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
           src="/images/brewing-bg.webp"
         />
       </div>

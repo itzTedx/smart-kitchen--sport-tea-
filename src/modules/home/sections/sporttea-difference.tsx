@@ -11,7 +11,7 @@ export function SportTeaDifference() {
           >
             <IconTeaCup2 className="size-3 text-secondary sm:size-4" />
           </div>
-          <span className="text-sm sm:text-base">Sip the wellness</span>
+          <span className="text-sm sm:text-base">Nature in a cup</span>
         </div>
         <h2 className="mt-2 text-2xl text-brand-foreground sm:mt-3 sm:text-3xl">
           What Makes
@@ -20,7 +20,7 @@ export function SportTeaDifference() {
             SportTea Different?
           </span>
         </h2>
-        <div className="mt-6 block space-y-3 text-balance text-base text-secondary-muted leading-relaxed tracking-tight sm:mt-8 sm:text-lg lg:text-xl">
+        <div className="mt-6 block space-y-3 text-balance text-lg text-secondary-muted leading-relaxed sm:mt-8 md:tracking-tight lg:text-xl">
           <p>
             At Sport Tea, we believe tea isn&apos;t just a beverage - it&apos;s a ritual of wellness, focus, and
             comfort. Whether you&apos;re starting your morning or winding down in the evening, our handcrafted blends

@@ -160,7 +160,7 @@ export default function ProductDetailPage({ params }: { params: Params }) {
 
             <div className="space-y-7 p-4">
               <div>
-                <h1 className="font-moret text-4xl">{product.title}</h1>
+                <h2 className="font-moret text-4xl">{product.title}</h2>
                 <p className="mt-2 font-medium text-lg">
                   ₹{product.price} / {product.unit}
                 </p>

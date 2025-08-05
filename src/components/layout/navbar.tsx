@@ -42,8 +42,10 @@ export const Navbar = () => {
       </nav>
 
       <div className="flex items-center gap-2">
-        <Button className="has-[>svg]:pr-5" variant="cta">
-          <IconShoppingCart />
+        <Button className="gap-4 pl-1 has-[>div>svg]:pr-5" variant="cta">
+          <div aria-hidden="true" className="flex size-8 items-center justify-center rounded-full bg-white md:size-10">
+            <IconShoppingCart className="size-4 text-secondary md:size-5" />
+          </div>
           Cart
         </Button>
         {/* Mobile Menu Button */}

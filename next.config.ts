@@ -17,12 +17,7 @@ const nextConfig: NextConfig = {
   // Turbopack optimizations
   experimental: {
     // Optimize package imports for Turbopack
-    optimizePackageImports: [
-      "lucide-react",
-      "@radix-ui/react-accordion",
-      "@radix-ui/react-separator",
-      "@radix-ui/react-slot",
-    ],
+    optimizePackageImports: ["lucide-react", "@radix-ui"],
   },
 
   // Compression settings

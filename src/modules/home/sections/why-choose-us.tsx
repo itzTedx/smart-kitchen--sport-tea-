@@ -53,6 +53,7 @@ export function WhyChooseUs() {
         fill
         placeholder="sporttea"
         quality="high"
+        sizes="(max-width: 640px) 100vw,  50vw"
         src="/images/features-hero.webp"
       />
     </article>

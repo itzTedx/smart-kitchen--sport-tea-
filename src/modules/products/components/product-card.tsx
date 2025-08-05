@@ -16,10 +16,14 @@ export const ProductCard = ({ data }: Props) => {
       className="group relative overflow-hidden rounded-xl border bg-white p-7 shadow-md shadow-secondary/5"
       key={data.id}
     >
-      <Link className="absolute inset-0 z-20" href={`/products/${data.slug}`} />
+      <Link
+        className="absolute inset-0 z-20"
+        href={`/products/${data.slug}`}
+        title={`View ${data.title} product details`}
+      />
 
       <header className="mb-6">
-        <h3 className="font-moret text-2xl" id={`product-title-${data.id}`}>
+        <h3 className="font-moret text-2xl text-secondary" id={`product-title-${data.id}`}>
           {data.title}
         </h3>
         <p className="text-lg">
@@ -47,8 +51,8 @@ export const ProductCard = ({ data }: Props) => {
         </Link>
       </Button>
 
-      <div className="-translate-y-1/2 -translate-x-1/2 absolute top-1/2 left-0 h-1/2 w-6 rounded-full bg-primary-foreground opacity-0 blur-xl transition-opacity duration-300 ease-in group-hover:opacity-100" />
-      <div className="-translate-y-1/2 -translate-x-1/2 absolute top-1/2 right-0 h-1/2 w-6 rounded-full bg-primary-foreground opacity-0 blur-xl transition-opacity duration-300 ease-in group-hover:opacity-100" />
+      <div className="-translate-y-1/2 -translate-x-1/2 absolute top-1/2 left-0 h-1/2 w-6 rounded-full bg-primary/50 opacity-0 blur-2xl transition-opacity duration-300 ease-in group-hover:opacity-100" />
+      <div className="-translate-y-1/2 absolute top-1/2 right-0 h-1/2 w-6 translate-x-1/2 rounded-full bg-primary/50 opacity-0 blur-2xl transition-opacity duration-300 ease-in group-hover:opacity-100" />
     </article>
   );
 };

@@ -24,7 +24,7 @@ export const HomeFeatures = () => {
             Chosen for Wellness
           </span>
         </h2>
-        <p className="mx-auto max-w-xl text-sm leading-relaxed md:text-base">
+        <p className="mx-auto max-w-xl text-balance leading-relaxed">
           Our teas are sourced from the lush estates of the Nilgiri Hills, delivering a naturally sweet, smooth taste
           with every cup. Organic, pure, and full of wellness.
         </p>
@@ -47,29 +47,29 @@ export const HomeFeatures = () => {
                 className="flex items-center justify-center gap-2 rounded-xl bg-white py-4 md:gap-2 md:py-5 xl:gap-4"
               >
                 <div className="flex size-10 items-center justify-center rounded-xl bg-primary-foreground md:size-12 xl:size-16">
-                  <IconBrain className="size-5 shrink-0 md:size-6" />
+                  <IconBrain className="size-5 shrink-0 md:size-8" />
                 </div>
                 <div className="flex size-14 items-center justify-center rounded-xl bg-primary-foreground md:size-16 xl:size-20">
-                  <IconTeaCup className="size-6 shrink-0 md:size-7" />
+                  <IconTeaCup className="size-9 shrink-0 md:size-14" />
                 </div>
                 <div className="flex size-10 items-center justify-center rounded-xl bg-primary-foreground md:size-12 xl:size-16">
-                  <IconBrain className="size-5 shrink-0 md:size-6" />
+                  <IconBrain className="size-5 shrink-0 md:size-8" />
                 </div>
               </div>
               <article className="rounded-xl bg-white p-4 md:p-6 lg:p-7">
                 <h4 className="font-moret text-lg text-secondary md:text-xl">Herbs That Know Their Roots</h4>
-                <p className="mt-2 text-secondary-muted md:text-sm">
+                <p className="mt-2 text-balance text-secondary-muted md:text-sm">
                   From digestion to immunity, our herbs aren't just trendy - they've been healing humans longer than
                   most medicines.
                 </p>
-                <p className="mt-4 text-secondary-muted text-xs md:mt-6 md:tracking-tight">
+                <p className="mt-4 text-muted-foreground text-xs md:mt-6 md:tracking-tight">
                   Thousands of years of tradition in every scoop
                 </p>
               </article>
             </div>
             <article className="relative flex flex-col justify-end overflow-hidden rounded-xl bg-white p-4 text-center md:col-span-4 md:p-6 lg:p-7">
               <h4 className="z-1 font-moret text-secondary text-xl md:text-2xl">Tea That Powers You</h4>
-              <p className="z-1 mt-2 text-secondary-muted md:text-sm md:tracking-tight">
+              <p className="z-1 mt-2 text-balance text-secondary-muted md:text-sm md:tracking-tight">
                 Each blend is crafted to energize, relax, or restore - supporting focus, calm, and balance with every
                 sip.
               </p>
@@ -98,7 +98,7 @@ export const HomeFeatures = () => {
             </Button>
           </article>
         </div>
-        <article className="relative mt-3 flex flex-col justify-between overflow-hidden rounded-xl bg-white p-4 md:p-6 lg:col-span-5 lg:mt-0 lg:p-7">
+        <article className="relative mt-3 flex flex-col justify-between overflow-hidden rounded-xl bg-white p-4 md:p-6 lg:col-span-5 lg:mt-0 lg:p-7 lg:pt-4">
           <h4 className="bg-gradient-to-b from-secondary to-secondary/20 bg-clip-text text-center font-moret text-4xl text-transparent leading-none tracking-tighter md:text-5xl lg:text-[5.4rem]">
             100% Organic
           </h4>
@@ -120,19 +120,19 @@ export const HomeFeatures = () => {
               <Separator />
               <ul className="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4" role="list">
                 <li className="text-center" role="listitem">
-                  <h5 className="text-muted-foreground text-xs tracking-tight md:text-sm">Organic</h5>
+                  <h5 className="text-muted-foreground text-sm tracking-tight">Organic</h5>
                   <p className="font-moret font-semibold text-lg md:text-xl">100%</p>
                 </li>
                 <li className="text-center" role="listitem">
-                  <h5 className="text-muted-foreground text-xs tracking-tight md:text-sm">Pesticides</h5>
+                  <h5 className="text-muted-foreground text-sm tracking-tight">Pesticides</h5>
                   <p className="font-moret font-semibold text-lg md:text-xl">Free</p>
                 </li>
                 <li className="text-center" role="listitem">
-                  <h5 className="text-muted-foreground text-xs tracking-tight md:text-sm">Additives</h5>
+                  <h5 className="text-muted-foreground text-sm tracking-tight">Additives</h5>
                   <p className="font-moret font-semibold text-lg md:text-xl">Zero</p>
                 </li>
                 <li className="text-center" role="listitem">
-                  <h5 className="text-muted-foreground text-xs tracking-tight md:text-sm">Artificial</h5>
+                  <h5 className="text-muted-foreground text-sm tracking-tight">Artificial</h5>
                   <p className="font-moret font-semibold text-lg md:text-xl">0%</p>
                 </li>
               </ul>
@@ -156,6 +156,7 @@ export const HomeFeatures = () => {
             fill
             placeholder="sporttea"
             quality="high"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 41.666667vw"
             src="/images/features-hero.webp"
           />
         </article>
