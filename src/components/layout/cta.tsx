@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 export const Cta = () => {
   return (
-    <section className="container max-w-7xl pb-32">
+    <section className="container max-w-7xl">
       <div className="relative overflow-hidden rounded-3xl">
         <div className="relative z-10 flex flex-col gap-3 p-16">
           <h5 className="text-center font-medium font-moret text-5xl text-brand-foreground">
