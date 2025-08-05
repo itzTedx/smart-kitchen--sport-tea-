@@ -16,7 +16,7 @@ export const products: Product[] = [
   {
     id: 1,
     title: "Premium Black Tea",
-    image: "/images/products/tea-box.png",
+    image: "/images/products/tea-box.webp",
     slug: "premium-black-tea",
     price: 349,
     unit: "100g",
@@ -46,7 +46,7 @@ export const products: Product[] = [
   {
     id: 2,
     title: "Premium Strong Black Tea",
-    image: "/images/products/tea-1.png",
+    image: "/images/products/tea-1.webp",
     slug: "premium-strong-black-tea",
     price: 349,
     unit: "100g",
@@ -76,7 +76,7 @@ export const products: Product[] = [
   {
     id: 3,
     title: "Premium Green Tea",
-    image: "/images/products/tea-2.png",
+    image: "/images/products/tea-2.webp",
     slug: "premium-green-tea",
     price: 349,
     unit: "100g",

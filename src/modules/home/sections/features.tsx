@@ -156,7 +156,7 @@ export const HomeFeatures = () => {
             fill
             placeholder="sporttea"
             quality="high"
-            src="/images/features-hero.png"
+            src="/images/features-hero.webp"
           />
         </article>
       </div>

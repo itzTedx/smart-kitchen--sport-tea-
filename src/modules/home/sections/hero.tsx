@@ -48,7 +48,7 @@ export const HomeHero = () => {
           className="mx-auto h-auto w-[90vw] sm:w-[80vw] md:w-[75vw] lg:w-[65vw]"
           height={480}
           priority
-          src="/images/hero.png"
+          src="/images/hero.webp"
           width={1240}
         />
         <div
