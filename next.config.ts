@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
   // Turbopack optimizations
   experimental: {
     // Optimize package imports for Turbopack
-    optimizePackageImports: ["lucide-react", "@radix-ui"],
+    optimizePackageImports: ["lucide-react", "radix-ui"],
   },
 
   // Compression settings
