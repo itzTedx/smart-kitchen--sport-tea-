@@ -2,6 +2,7 @@ export interface Product {
   id: number;
   title: string;
   image: string;
+  slug: string;
   price: number;
   unit: string;
   overview: string;
@@ -15,7 +16,8 @@ export const products: Product[] = [
   {
     id: 1,
     title: "Premium Black Tea",
-    image: "/images/products/tea-box.png",
+    image: "/images/products/tea-box.webp",
+    slug: "premium-black-tea",
     price: 349,
     unit: "100g",
     overview: `Grown in high-altitude, pesticide-free soil and harvested at peak bloom, our Chamomile Calm Tea is a gentle blend crafted for your moments of rest. Known for its natural calming properties, this brew helps ease stress, support better sleep, and reduce digestive discomfort — all without making you drowsy during the day.
@@ -44,7 +46,8 @@ export const products: Product[] = [
   {
     id: 2,
     title: "Premium Strong Black Tea",
-    image: "/images/products/tea-1.png",
+    image: "/images/products/tea-1.webp",
+    slug: "premium-strong-black-tea",
     price: 349,
     unit: "100g",
     overview: `Grown in high-altitude, pesticide-free soil and harvested at peak bloom, our Chamomile Calm Tea is a gentle blend crafted for your moments of rest. Known for its natural calming properties, this brew helps ease stress, support better sleep, and reduce digestive discomfort — all without making you drowsy during the day.
@@ -73,7 +76,8 @@ export const products: Product[] = [
   {
     id: 3,
     title: "Premium Green Tea",
-    image: "/images/products/tea-2.png",
+    image: "/images/products/tea-2.webp",
+    slug: "premium-green-tea",
     price: 349,
     unit: "100g",
     overview: `Grown in high-altitude, pesticide-free soil and harvested at peak bloom, our Chamomile Calm Tea is a gentle blend crafted for your moments of rest. Known for its natural calming properties, this brew helps ease stress, support better sleep, and reduce digestive discomfort — all without making you drowsy during the day.
