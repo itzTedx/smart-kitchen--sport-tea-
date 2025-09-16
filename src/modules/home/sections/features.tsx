@@ -91,7 +91,7 @@ export const HomeFeatures = () => {
               Talk to our expert{" "}
               <div
                 aria-hidden="true"
-                className="flex size-8 items-center justify-center rounded-full bg-white md:size-10"
+                className="flex size-8 items-center justify-center rounded-md bg-white md:size-10"
               >
                 <IconShoppingCart className="size-4 text-secondary md:size-5" />
               </div>

@@ -20,7 +20,7 @@ export const Navbar = () => {
   const [, setIsCartOpen] = useAtom(isCartOpenAtom);
 
   return (
-    <nav className="container sticky top-0 z-999 flex max-w-3xl items-center justify-between border-white border-b bg-white/70 px-3 py-2 backdrop-blur-xl md:top-3 md:rounded-full">
+    <nav className="container sticky top-0 z-999 flex max-w-3xl items-center justify-between border-white border-b bg-white/70 p-2 backdrop-blur-xl md:top-3 md:rounded-md">
       <Link className="flex items-center gap-3" href="/">
         <Logo />
         <span className="sr-only font-semibold font-suisse">Sport Tea</span>
@@ -45,14 +45,18 @@ export const Navbar = () => {
 
       <div className="flex items-center gap-2">
         <Button
-          className="gap-2.5 pl-1 has-[>div>svg]:pr-5 max-md:h-10 md:gap-4"
+          className="group relative gap-2.5 overflow-hidden pl-1 hover:text-secondary has-[>div>svg]:pr-5 max-md:h-10 md:gap-4"
           onClick={() => setIsCartOpen(true)}
           variant="cta"
         >
-          <div aria-hidden="true" className="flex size-8 items-center justify-center rounded-full bg-white md:size-10">
+          <div
+            aria-hidden="true"
+            className="relative z-10 flex size-8 items-center justify-center rounded bg-white md:size-10"
+          >
             <CartIcon className="size-4 text-secondary md:size-5" />
           </div>
-          Cart
+          <span className="relative z-10">Cart</span>
+          <span className="absolute inset-x-0 left-1 size-8 rounded-md bg-white transition-all group-hover:left-0 group-hover:size-full md:size-10" />
         </Button>
 
         {/* Mobile Menu Sheet */}

@@ -36,7 +36,7 @@ export const HomeHero = () => {
       <Button aria-label="Explore our tea collections" asChild className="text-sm sm:text-base">
         <Link href="/products">
           Explore Collections
-          <div aria-hidden="true" className="flex size-8 items-center justify-center rounded-full bg-white sm:size-10">
+          <div aria-hidden="true" className="flex size-8 items-center justify-center rounded-md bg-white sm:size-10">
             <IconLeaf className="size-4 text-secondary sm:size-5" />
           </div>
         </Link>
@@ -58,7 +58,7 @@ export const HomeHero = () => {
       </div>
       <div
         aria-hidden="true"
-        className="-z-9 absolute inset-0 h-full w-full bg-[linear-gradient(to_right,var(--background)_1px,transparent_1px),linear-gradient(to_bottom,var(--background)_1px,transparent_1px)] bg-[size:20px_20px] md:bg-[linear-gradient(to_right,var(--background)_1px,transparent_1px),linear-gradient(to_bottom,var(--background)_1px,transparent_1px)]"
+        className="-z-9 absolute inset-0 h-full w-full bg-[linear-gradient(to_right,var(--background)_1px,transparent_1px),linear-gradient(to_bottom,var(--background)_1px,transparent_1px)] bg-[size:20px_20px] opacity-40 md:bg-[linear-gradient(to_right,var(--background)_1px,transparent_1px),linear-gradient(to_bottom,var(--background)_1px,transparent_1px)]"
       />
       <div
         aria-hidden="true"

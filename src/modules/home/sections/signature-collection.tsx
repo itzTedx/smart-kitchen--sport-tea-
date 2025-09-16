@@ -29,7 +29,7 @@ export function SignatureCollection({ products }: SignatureCollectionProps) {
           >
             <Link href="/products">
               <span>Explore Collections</span>
-              <div aria-hidden="true" className="flex size-10 items-center justify-center rounded-full bg-secondary">
+              <div aria-hidden="true" className="flex size-10 items-center justify-center rounded-md bg-secondary">
                 <IconArrowRight className="size-4 text-secondary-foreground sm:size-5" />
               </div>
             </Link>
