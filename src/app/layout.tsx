@@ -10,29 +10,29 @@ import { CartProvider } from "@/components/providers/cart-provider";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "SportTea - Premium Organic Tea & Wellness Products | Nature's Essence, Boldly Brewed",
+  title: "Smart Kitchen - Premium Organic Tea & Wellness Products | Nature's Essence, Boldly Brewed",
   description:
     "Discover premium organic tea from the pristine Nilgiri Hills. Shop our curated collection of black, green, and herbal teas. Free shipping on orders over $50. Experience nature's essence, boldly brewed.",
   keywords:
     "organic tea, premium tea, Nilgiri Hills tea, black tea, green tea, herbal tea, wellness products, high-altitude tea, pesticide-free tea",
-  authors: [{ name: "SportTea" }],
-  creator: "SportTea",
-  publisher: "SportTea",
+  authors: [{ name: "Smart Kitchen" }],
+  creator: "Smart Kitchen",
+  publisher: "Smart Kitchen",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://sporttea.in"),
+  metadataBase: new URL("smartkitchen.store"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://sporttea.in",
-    siteName: "SportTea",
-    title: "SportTea - Premium Organic Tea & Wellness Products",
+    url: "smartkitchen.store",
+    siteName: "Smart Kitchen",
+    title: "Smart Kitchen - Premium Organic Tea & Wellness Products",
     description:
       "Discover premium organic tea from the pristine Nilgiri Hills. Shop our curated collection of black, green, and herbal teas.",
     images: [
@@ -40,17 +40,17 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "SportTea - Premium Organic Tea Collection",
+        alt: "Smart Kitchen - Premium Organic Tea Collection",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SportTea - Premium Organic Tea & Wellness Products",
+    title: "Smart Kitchen - Premium Organic Tea & Wellness Products",
     description:
       "Discover premium organic tea from the pristine Nilgiri Hills. Shop our curated collection of black, green, and herbal teas.",
     images: ["/og-image.jpg"],
-    creator: "@sporttea",
+    creator: "@smart Kitchen",
   },
   robots: {
     index: true,
@@ -77,7 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html className="scroll-smooth" lang="en">
       <head>
         {/* Resource hints for performance optimization */}
-        <link href="https://sporttea.in" rel="dns-prefetch" />
+        <link href="https://smart Kitchen.in" rel="dns-prefetch" />
       </head>
       <body className={cn("antialiased", moret.variable, helvetica.className)}>
         <CartProvider>

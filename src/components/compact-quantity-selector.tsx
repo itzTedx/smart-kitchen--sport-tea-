@@ -1,7 +1,5 @@
 "use client";
 
-import { useId } from "react";
-
 import { useAtom } from "jotai";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
@@ -16,7 +14,6 @@ interface CompactQuantitySelectorProps {
 }
 
 export default function CompactQuantitySelector({ product, className }: CompactQuantitySelectorProps) {
-  const id = useId();
   const [cart] = useAtom(cartAtom);
   const [, updateCartItemQuantity] = useAtom(updateCartItemQuantityAtom);
 

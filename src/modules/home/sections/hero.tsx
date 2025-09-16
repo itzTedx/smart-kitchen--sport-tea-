@@ -44,7 +44,7 @@ export const HomeHero = () => {
 
       <div className="-mb-6 relative mt-6">
         <Image
-          alt="Premium organic tea collection from SportTea featuring high-altitude teas from Nilgiri Hills"
+          alt="Premium organic tea collection from Smart Kitchen featuring high-altitude teas from Nilgiri Hills"
           className="mx-auto h-auto w-[90vw] sm:w-[80vw] md:w-[75vw] lg:w-[65vw]"
           height={480}
           priority

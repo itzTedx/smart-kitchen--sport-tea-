@@ -154,7 +154,7 @@ export const HomeFeatures = () => {
             alt="Nilgiri Hills tea estate showing organic tea cultivation in the Blue Mountains of India"
             className="object-cover object-bottom"
             fill
-            placeholder="sporttea"
+            placeholder="smartkitchen"
             quality="high"
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 41.666667vw"
             src="/images/features-hero.webp"

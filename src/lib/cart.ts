@@ -11,7 +11,7 @@ export interface CartItem {
 export const isCartOpenAtom = atom(false);
 
 // Use atomWithStorage for localStorage persistence
-export const cartAtom = atomWithStorage<CartItem[]>("sporttea-cart", []);
+export const cartAtom = atomWithStorage<CartItem[]>("smartkitchen-cart", []);
 
 // Derived atoms for cart calculations
 export const cartItemCountAtom = atom((get) => {
@@ -60,6 +60,6 @@ export const removeFromCartAtom = atom(null, (get, set, productId: number) => {
   set(cartAtom, updatedCart);
 });
 
-export const clearCartAtom = atom(null, (get, set) => {
+export const clearCartAtom = atom(null, (_get, set) => {
   set(cartAtom, []);
 });

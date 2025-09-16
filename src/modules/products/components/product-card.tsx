@@ -32,10 +32,10 @@ export const ProductCard = ({ data }: Props) => {
       </header>
       <div className="relative mb-6 size-80">
         <OptimizedImage
-          alt={`${data.title} - Premium organic tea product from SportTea`}
+          alt={`${data.title} - Premium organic product from Smart Kitchen`}
           className="group-hover:-rotate-1 object-contain transition-transform ease-out group-hover:scale-105"
           fill
-          placeholder="sporttea"
+          placeholder="smartkitchen"
           quality="high"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           src={data.image}

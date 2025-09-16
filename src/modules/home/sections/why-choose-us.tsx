@@ -19,7 +19,7 @@ export function WhyChooseUs() {
             <IconMountain aria-hidden="true" className="size-6 sm:size-8" />
           </div>
           <Separator />
-          <ul aria-label="Key benefits of choosing SportTea" className="w-fit divide-y" role="list">
+          <ul aria-label="Key benefits of choosing Smart kitchen" className="w-fit divide-y" role="list">
             <li className="flex items-center gap-2 pb-1.5" role="listitem">
               <IconLeaf2 aria-hidden="true" className="size-4 text-primary sm:size-5" />
               <p className="text-base sm:text-lg">100% Natural Ingredients</p>
@@ -51,7 +51,7 @@ export function WhyChooseUs() {
         alt="Nilgiri Hills tea estate showing organic tea cultivation and natural ingredients"
         className="object-cover object-bottom"
         fill
-        placeholder="sporttea"
+        placeholder="smartkitchen"
         quality="high"
         sizes="(max-width: 640px) 100vw,  50vw"
         src="/images/features-hero.webp"

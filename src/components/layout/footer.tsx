@@ -47,8 +47,8 @@ export const Footer = () => {
                 </li>
                 <li className="text-base md:text-lg">
                   <h5 className="text-secondary-foreground/60 text-xs md:text-sm">Email:</h5>
-                  <Link className="font-medium" href={"mailto:info@sporttea.in"}>
-                    info@sporttea.in
+                  <Link className="font-medium" href={"mailto:info@smartkitchen.store"}>
+                    info@smartkitchen.store
                   </Link>
                 </li>
               </ul>

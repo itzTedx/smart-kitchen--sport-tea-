@@ -36,8 +36,8 @@ export function SignatureCollection({ products }: SignatureCollectionProps) {
           </Button>
         </div>
         <p className="mt-4 max-w-lg text-lg">
-          Whether you sip, stir, brew, or cook — SportTea offers a range of premium natural products to elevate your
-          daily rituals.
+          Whether you sip, stir, brew, or cook — Smart Kitchen offers a range of premium natural products to elevate
+          your daily rituals.
         </p>
       </header>
 
