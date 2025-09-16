@@ -19,7 +19,7 @@ export const Footer = () => {
           </h4>
           <Button className="w-full justify-between" variant="outline">
             Get Started
-            <div className="flex size-8 items-center justify-center rounded-full bg-secondary md:size-10">
+            <div className="flex size-8 items-center justify-center rounded-md bg-secondary md:size-10">
               <IconArrowRight className="size-4 text-secondary-foreground md:size-5" />
             </div>
           </Button>
@@ -47,8 +47,8 @@ export const Footer = () => {
                 </li>
                 <li className="text-base md:text-lg">
                   <h5 className="text-secondary-foreground/60 text-xs md:text-sm">Email:</h5>
-                  <Link className="font-medium" href={"mailto:info@sporttea.in"}>
-                    info@sporttea.in
+                  <Link className="font-medium" href={"mailto:info@smartkitchen.store"}>
+                    info@smartkitchen.store
                   </Link>
                 </li>
               </ul>

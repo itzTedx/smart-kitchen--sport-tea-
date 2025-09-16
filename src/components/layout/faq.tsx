@@ -16,7 +16,7 @@ export function FAQ() {
         </header>
         <div className="grid gap-3 lg:col-span-2">
           <Accordion
-            aria-label="Frequently asked questions about SportTea products and services"
+            aria-label="Frequently asked questions about Smart Kitchen products and services"
             className="w-full space-y-2"
             defaultValue="01"
             type="single"

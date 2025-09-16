@@ -31,21 +31,25 @@ export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "SportTea",
-    url: "https://sporttea.com",
-    logo: "https://sporttea.com/logo.svg",
+    name: "Smart Kitchen",
+    url: "https://smartkitchen.store",
+    logo: "https://smartkitchen.store/logo.svg",
     description: "Premium organic tea and wellness products from the Nilgiri Hills",
     address: {
       "@type": "PostalAddress",
       addressCountry: "India",
     },
-    sameAs: ["https://facebook.com/sporttea", "https://twitter.com/sporttea", "https://instagram.com/sporttea"],
+    sameAs: [
+      "https://facebook.com/smart Kitchen",
+      "https://twitter.com/smart Kitchen",
+      "https://instagram.com/smart Kitchen",
+    ],
   };
 
   const productStructuredData = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "SportTea Premium Tea Collection",
+    name: "Smart Kitchen Premium Tea Collection",
     description: "Premium organic tea products from the Nilgiri Hills",
     itemListElement: data.map((product, index) => ({
       "@type": "ListItem",
@@ -54,7 +58,7 @@ export default function Home() {
         "@type": "Product",
         name: product.title,
         description: product.overview,
-        image: `https://sporttea.com${product.image}`,
+        image: `https://smartkitchen.store/${product.image}`,
         offers: {
           "@type": "Offer",
           price: product.price,
@@ -63,7 +67,7 @@ export default function Home() {
         },
         brand: {
           "@type": "Brand",
-          name: "SportTea",
+          name: "Smart Kitchen",
         },
         category: "Tea Products",
       },
@@ -86,7 +90,7 @@ export default function Home() {
         type="application/ld+json"
       />
 
-      <main aria-label="SportTea Homepage" role="main">
+      <main aria-label="Smart Kitchen Homepage" role="main">
         {/* Critical components - load immediately */}
         <HomeHero />
         <HomeFeatures />

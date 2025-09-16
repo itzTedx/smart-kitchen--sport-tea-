@@ -1,5 +1,6 @@
-import { SportTeaDifference } from "@/modules/home/sections/sporttea-difference";
 import { WhyChooseUs } from "@/modules/home/sections/why-choose-us";
+
+import { SmartKitchenDifference } from "./difference";
 
 export function AboutSections() {
   return (
@@ -8,7 +9,7 @@ export function AboutSections() {
       id="about"
     >
       <WhyChooseUs />
-      <SportTeaDifference />
+      <SmartKitchenDifference />
     </section>
   );
 }

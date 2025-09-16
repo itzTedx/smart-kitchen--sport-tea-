@@ -1,5 +1,6 @@
 import { use } from "react";
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 import AddToCartButton from "@/components/add-to-cart-button";
 import { FAQ } from "@/components/layout/faq";
@@ -90,18 +91,7 @@ export default function ProductDetailPage({ params }: { params: Params }) {
   const { slug } = use(params);
   const product = products.find((p) => p.slug === slug);
 
-  if (!product) {
-    return (
-      <main className="container max-w-7xl pt-12">
-        <div className="flex min-h-[50vh] items-center justify-center">
-          <div className="text-center">
-            <h1 className="mb-4 font-moret text-2xl md:text-3xl">Product Not Found</h1>
-            <p className="text-muted-foreground">The requested product could not be found.</p>
-          </div>
-        </div>
-      </main>
-    );
-  }
+  if (!product) return notFound();
 
   const structuredData = generateStructuredData(product);
 

@@ -1,6 +1,6 @@
 import { IconTeaCup2 } from "@/assets/icons/tea-cup";
 
-export function SportTeaDifference() {
+export function SmartKitchenDifference() {
   return (
     <article className="sm:p-6">
       <header>
@@ -17,7 +17,7 @@ export function SportTeaDifference() {
           What Makes
           <br />
           <span className="font-moret font-semibold text-3xl text-secondary sm:text-4xl md:text-5xl">
-            SportTea Different?
+            SmartKitchen Different?
           </span>
         </h2>
         <div className="mt-6 block space-y-3 text-balance text-lg text-secondary-muted leading-relaxed sm:mt-8 md:tracking-tight lg:text-xl">
@@ -33,7 +33,7 @@ export function SportTeaDifference() {
         </div>
       </header>
       <ul
-        aria-label="Key features that make SportTea different"
+        aria-label="Key features that make Smart Kitchen different"
         className="mt-12 flex items-center justify-center gap-4 sm:mt-16 sm:gap-6 lg:mt-20 lg:gap-8"
         role="list"
       >

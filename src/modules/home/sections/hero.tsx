@@ -36,7 +36,7 @@ export const HomeHero = () => {
       <Button aria-label="Explore our tea collections" asChild className="text-sm sm:text-base">
         <Link href="/products">
           Explore Collections
-          <div aria-hidden="true" className="flex size-8 items-center justify-center rounded-full bg-white sm:size-10">
+          <div aria-hidden="true" className="flex size-8 items-center justify-center rounded-md bg-white sm:size-10">
             <IconLeaf className="size-4 text-secondary sm:size-5" />
           </div>
         </Link>
@@ -44,7 +44,7 @@ export const HomeHero = () => {
 
       <div className="-mb-6 relative mt-6">
         <Image
-          alt="Premium organic tea collection from SportTea featuring high-altitude teas from Nilgiri Hills"
+          alt="Premium organic tea collection from Smart Kitchen featuring high-altitude teas from Nilgiri Hills"
           className="mx-auto h-auto w-[90vw] sm:w-[80vw] md:w-[75vw] lg:w-[65vw]"
           height={480}
           priority
@@ -58,7 +58,7 @@ export const HomeHero = () => {
       </div>
       <div
         aria-hidden="true"
-        className="-z-9 absolute inset-0 h-full w-full bg-[linear-gradient(to_right,var(--background)_1px,transparent_1px),linear-gradient(to_bottom,var(--background)_1px,transparent_1px)] bg-[size:20px_20px] md:bg-[linear-gradient(to_right,var(--background)_1px,transparent_1px),linear-gradient(to_bottom,var(--background)_1px,transparent_1px)]"
+        className="-z-9 absolute inset-0 h-full w-full bg-[linear-gradient(to_right,var(--background)_1px,transparent_1px),linear-gradient(to_bottom,var(--background)_1px,transparent_1px)] bg-[size:20px_20px] opacity-40 md:bg-[linear-gradient(to_right,var(--background)_1px,transparent_1px),linear-gradient(to_bottom,var(--background)_1px,transparent_1px)]"
       />
       <div
         aria-hidden="true"

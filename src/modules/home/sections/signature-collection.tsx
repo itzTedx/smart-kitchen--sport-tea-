@@ -29,15 +29,15 @@ export function SignatureCollection({ products }: SignatureCollectionProps) {
           >
             <Link href="/products">
               <span>Explore Collections</span>
-              <div aria-hidden="true" className="flex size-10 items-center justify-center rounded-full bg-secondary">
+              <div aria-hidden="true" className="flex size-10 items-center justify-center rounded-md bg-secondary">
                 <IconArrowRight className="size-4 text-secondary-foreground sm:size-5" />
               </div>
             </Link>
           </Button>
         </div>
         <p className="mt-4 max-w-lg text-lg">
-          Whether you sip, stir, brew, or cook — SportTea offers a range of premium natural products to elevate your
-          daily rituals.
+          Whether you sip, stir, brew, or cook — Smart Kitchen offers a range of premium natural products to elevate
+          your daily rituals.
         </p>
       </header>
 

@@ -5,7 +5,7 @@ export const getCartFromStorage = (): CartItem[] => {
   if (typeof window === "undefined") return [];
 
   try {
-    const stored = localStorage.getItem("sporttea-cart");
+    const stored = localStorage.getItem("smartkitchen-cart");
     return stored ? JSON.parse(stored) : [];
   } catch (error) {
     console.error("Error reading cart from localStorage:", error);
@@ -17,7 +17,7 @@ export const setCartToStorage = (cart: CartItem[]): void => {
   if (typeof window === "undefined") return;
 
   try {
-    localStorage.setItem("sporttea-cart", JSON.stringify(cart));
+    localStorage.setItem("smartkitchen-cart", JSON.stringify(cart));
   } catch (error) {
     console.error("Error writing cart to localStorage:", error);
   }
@@ -27,7 +27,7 @@ export const clearCartFromStorage = (): void => {
   if (typeof window === "undefined") return;
 
   try {
-    localStorage.removeItem("sporttea-cart");
+    localStorage.removeItem("smartkitchen-cart");
   } catch (error) {
     console.error("Error clearing cart from localStorage:", error);
   }

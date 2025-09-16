@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/private/", "/admin/"],
     },
-    sitemap: "https://sporttea.in/sitemap.xml",
+    sitemap: "https://smartkitchen.store/sitemap.xml",
   };
 }

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import {
   generateGradientPlaceholder,
-  generateSportTeaPlaceholder,
+  generateSmartKitchenPlaceholder,
   generateTexturedPlaceholder,
   getQualityFromPreset,
   type ImageQuality,
@@ -21,7 +21,7 @@ interface OptimizedImageProps {
   priority?: boolean;
   quality?: number | ImageQuality;
   className?: string;
-  placeholder?: "blur" | "empty" | "sporttea" | "gradient" | "textured";
+  placeholder?: "blur" | "empty" | "smartkitchen" | "gradient" | "textured";
   blurDataURL?: string;
   sizes?: string;
   onLoad?: () => void;
@@ -91,8 +91,8 @@ export const OptimizedImage = ({
       let generatedPlaceholder: string | undefined;
 
       switch (placeholder) {
-        case "sporttea":
-          generatedPlaceholder = generateSportTeaPlaceholder(width, height);
+        case "smartkitchen":
+          generatedPlaceholder = generateSmartKitchenPlaceholder(width, height);
           break;
         case "gradient":
           generatedPlaceholder = generateGradientPlaceholder(width, height);
@@ -114,7 +114,10 @@ export const OptimizedImage = ({
 
   // For Next.js compatibility, we need to handle blur placeholder differently
   const shouldUseBlur =
-    placeholder === "blur" || placeholder === "sporttea" || placeholder === "gradient" || placeholder === "textured";
+    placeholder === "blur" ||
+    placeholder === "smartkitchen" ||
+    placeholder === "gradient" ||
+    placeholder === "textured";
 
   const nextJsPlaceholder = shouldUseBlur ? "blur" : placeholder;
 
@@ -206,7 +209,6 @@ export const OptimizedImage = ({
 // Hook for lazy loading images
 export const useLazyImage = (src: string, threshold = 0.1) => {
   const [imageSrc, setImageSrc] = useState<string>("");
-  const [isLoaded, setIsLoaded] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
@@ -229,7 +231,7 @@ export const useLazyImage = (src: string, threshold = 0.1) => {
     return () => observer.disconnect();
   }, [src, threshold]);
 
-  return { imageSrc, isLoaded, imgRef };
+  return { imageSrc, imgRef };
 };
 
 // Lazy loading image component

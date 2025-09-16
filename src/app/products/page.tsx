@@ -17,7 +17,7 @@ const LazyFAQ = dynamic(() => import("@/components/layout/faq").then((mod) => ({
 
 export default function ProductsPage() {
   return (
-    <main aria-label="SportTea Products">
+    <main aria-label="Smart Kitchen Products">
       <div className="container max-w-7xl pt-7">
         <header className="relative flex aspect-16/6 items-end justify-center overflow-hidden rounded-3xl py-10">
           <h1 className="relative z-10 text-center font-medium text-4xl text-white">
@@ -45,8 +45,8 @@ export default function ProductsPage() {
           </h2>
 
           <p className="mt-4 max-w-md text-balance sm:mt-0">
-            Whether you sip, stir, brew, or cook — SportTea offers a range of premium natural products to elevate your
-            daily rituals.
+            Whether you sip, stir, brew, or cook — Smart Kitchen offers a range of premium natural products to elevate
+            your daily rituals.
           </p>
         </div>
 

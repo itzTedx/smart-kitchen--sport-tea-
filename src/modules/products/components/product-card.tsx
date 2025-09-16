@@ -32,10 +32,10 @@ export const ProductCard = ({ data }: Props) => {
       </header>
       <div className="relative mb-6 size-80">
         <OptimizedImage
-          alt={`${data.title} - Premium organic tea product from SportTea`}
+          alt={`${data.title} - Premium organic product from Smart Kitchen`}
           className="group-hover:-rotate-1 object-contain transition-transform ease-out group-hover:scale-105"
           fill
-          placeholder="sporttea"
+          placeholder="smartkitchen"
           quality="high"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           src={data.image}
@@ -45,7 +45,7 @@ export const ProductCard = ({ data }: Props) => {
       <Button aria-label={`Add ${data.title} to cart`} asChild className="relative z-99 w-full justify-between">
         <Link href={`/products/${data.slug}`}>
           Shop Now{" "}
-          <div aria-hidden="true" className="flex size-8 items-center justify-center rounded-full bg-white sm:size-10">
+          <div aria-hidden="true" className="flex size-8 items-center justify-center rounded-md bg-white sm:size-10">
             <IconShoppingCart className="size-4 text-secondary sm:size-5" />
           </div>
         </Link>

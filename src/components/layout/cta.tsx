@@ -15,7 +15,7 @@ export const Cta = () => {
           </p>
           <Button className="mx-auto text-sm sm:text-base">
             Talk to our experts
-            <div className="flex size-8 items-center justify-center rounded-full bg-white sm:size-9 lg:size-10">
+            <div className="flex size-8 items-center justify-center rounded-md bg-white sm:size-9 lg:size-10">
               <IconArrowRight className="size-4 text-secondary sm:size-5" />
             </div>
           </Button>
