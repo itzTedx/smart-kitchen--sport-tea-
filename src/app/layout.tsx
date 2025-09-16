@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("smartkitchen.store"),
+  metadataBase: new URL("https://smartkitchen.store/"),
   alternates: {
     canonical: "/",
   },
