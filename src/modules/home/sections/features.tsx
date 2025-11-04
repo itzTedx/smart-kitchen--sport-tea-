@@ -4,6 +4,7 @@ import { IconLocationPin } from "@/assets/icons/location-pin";
 import { IconMountain } from "@/assets/icons/mountains";
 import { IconShoppingCart } from "@/assets/icons/shopping-cart";
 import { IconTeaCup } from "@/assets/icons/tea-cup";
+import { IconTruck } from "@/assets/icons/truck";
 import { Button } from "@/components/ui/button";
 import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Separator } from "@/components/ui/separator";
@@ -53,7 +54,7 @@ export const HomeFeatures = () => {
                   <IconTeaCup className="size-9 shrink-0 md:size-14" />
                 </div>
                 <div className="flex size-10 items-center justify-center rounded-xl bg-primary-foreground md:size-12 xl:size-16">
-                  <IconBrain className="size-5 shrink-0 md:size-8" />
+                  <IconTruck className="size-5 shrink-0 text-secondary md:size-8" />
                 </div>
               </div>
               <article className="rounded-xl bg-white p-4 md:p-6 lg:p-7">

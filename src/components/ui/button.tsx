@@ -11,7 +11,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "inset-shadow-[0_2px_4px_0] inset-shadow-[oklch(0.9108_0.0708_72.95)]/40 border-white/40 border-b bg-gradient-to-tr from-primary to-[oklch(0.8043_0.1343_68.83)] text-white shadow-[0_14px_8px_0_oklch(0.7296_0.1721_59.4/0.08),_0_4px_6px_0_oklch(0.3116_0.0458_52.92/0.15),_0_4px_12px_0_oklch(0.6427_0.14_69.7293/0.25)] hover:scale-102 hover:bg-gradient-to-tr hover:from-primary/90 hover:to-[oklch(0.8043_0.1343_68.83)]/90 hover:shadow-[0_18px_12px_0_oklch(0.7296_0.1721_59.4/0.12),_0_6px_8px_0_oklch(0.3116_0.0458_52.92/0.2),_0_6px_16px_0_oklch(0.6427_0.14_69.7293/0.35)] active:scale-[0.98] dark:border-foreground/20",
+          "inset-shadow-[0_2px_4px_0] inset-shadow-[oklch(0.9108_0.0708_72.95)]/40 border-white/40 border-b bg-gradient-to-tr from-primary to-[oklch(0.7303_0.1689_35.88)] text-white shadow-[0_14px_8px_0_oklch(0.3936_0.1615_29.4/0.08),_0_4px_6px_0_oklch(0.3116_0.0458_52.92/0.15),_0_4px_12px_0_oklch(0.6427_0.14_69.7293/0.25)] hover:scale-102 hover:bg-gradient-to-tr hover:from-primary/90 hover:to-[oklch(0.7303_0.1689_35.88)]/90 hover:shadow-[0_18px_12px_0_oklch(0.3936_0.1615_29.4/0.12),_0_6px_8px_0_oklch(0.3116_0.0458_52.92/0.2),_0_6px_16px_0_oklch(0.6427_0.14_69.7293/0.35)] active:scale-[0.98] dark:border-foreground/20",
         destructive:
           "bg-destructive text-white shadow-xs hover:scale-102 hover:bg-destructive/90 hover:shadow-md focus-visible:ring-destructive/20 active:scale-[0.98] dark:bg-destructive/60 dark:focus-visible:ring-destructive/40",
         outline:
