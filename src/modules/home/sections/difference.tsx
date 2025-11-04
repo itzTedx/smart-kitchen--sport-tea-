@@ -1,4 +1,8 @@
+import { IconGauge } from "@/assets/icons/gauge";
+import { IconHandPick } from "@/assets/icons/hand-pick";
+import { IconShield } from "@/assets/icons/shield";
 import { IconTeaCup2 } from "@/assets/icons/tea-cup";
+import { IconTruck } from "@/assets/icons/truck";
 
 export function SmartKitchenDifference() {
   return (
@@ -38,19 +42,39 @@ export function SmartKitchenDifference() {
         role="list"
       >
         <li className="flex flex-col items-center gap-2" role="listitem">
-          <div aria-hidden="true" className="size-16 rounded-full bg-primary-foreground sm:size-18 lg:size-20" />
+          <div
+            aria-hidden="true"
+            className="flex size-16 items-center justify-center rounded-full bg-primary-foreground text-primary sm:size-18 lg:size-20"
+          >
+            <IconHandPick className="size-6 sm:size-9" />
+          </div>
           <p className="text-sm sm:text-base">Handpicked</p>
         </li>
         <li className="flex flex-col items-center gap-2" role="listitem">
-          <div aria-hidden="true" className="size-16 rounded-full bg-primary-foreground sm:size-18 lg:size-20" />
+          <div
+            aria-hidden="true"
+            className="flex size-16 items-center justify-center rounded-full bg-primary-foreground text-primary sm:size-18 lg:size-20"
+          >
+            <IconShield className="size-6 sm:size-9" />
+          </div>
           <p className="text-sm sm:text-base">No Artificial</p>
         </li>
         <li className="flex flex-col items-center gap-2" role="listitem">
-          <div aria-hidden="true" className="size-16 rounded-full bg-primary-foreground sm:size-18 lg:size-20" />
+          <div
+            aria-hidden="true"
+            className="flex size-16 items-center justify-center rounded-full bg-primary-foreground text-primary sm:size-18 lg:size-20"
+          >
+            <IconGauge className="size-6 sm:size-9" />
+          </div>
           <p className="text-sm sm:text-base">Quick Brewing</p>
         </li>
         <li className="flex flex-col items-center gap-2" role="listitem">
-          <div aria-hidden="true" className="size-16 rounded-full bg-primary-foreground sm:size-18 lg:size-20" />
+          <div
+            aria-hidden="true"
+            className="flex size-16 items-center justify-center rounded-full bg-primary-foreground text-primary sm:size-18 lg:size-20"
+          >
+            <IconTruck className="size-6 sm:size-9" />
+          </div>
           <p className="text-sm sm:text-base">Quick Delivery</p>
         </li>
       </ul>
