@@ -9,12 +9,12 @@ import { Button } from "../ui/button";
 
 export const Footer = () => {
   return (
-    <footer className="relative py-16 md:py-32">
-      <div className="container relative z-10 grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 md:gap-4">
-        <div className="w-fit">
+    <footer className="relative">
+      <div className="container relative z-10 grid max-w-7xl grid-cols-1 gap-8 py-16 md:grid-cols-3 md:gap-4 md:py-32">
+        <div className="md:w-fit">
           <Logo />
           <h4 className="mt-8 mb-4 text-2xl tracking-tight md:mt-12 md:text-3xl">
-            Let's Talk Tea, Spices, <br />
+            Let's Talk Tea, Spices, <br className="hidden md:block" />
             or Business
           </h4>
           <Button className="w-full justify-between" variant="outline">
@@ -24,31 +24,51 @@ export const Footer = () => {
             </div>
           </Button>
         </div>
-        <div className="space-y-8 rounded-2xl bg-secondary p-6 text-secondary-foreground md:space-y-12 md:p-9">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-3">
+        <div className="space-y-8 rounded-2xl bg-secondary p-6 text-secondary-foreground md:col-span-2 md:space-y-12 md:p-9">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-5 md:gap-x-3">
             <div className="md:col-span-2">
               <h4 className="text-secondary-foreground/40">Products</h4>
               <ul className="mt-4 space-y-2 md:space-y-2.5">
                 {products.map((product) => (
-                  <li className="font-medium text-base md:text-lg" key={product.id}>
-                    <Link href={`/products/${product.id}`}>{product.title}</Link>
+                  <li className="font-medium" key={product.id}>
+                    <Link href={`/products/${product.slug}`}>{product.title}</Link>
                   </li>
                 ))}
               </ul>
             </div>
-            <div>
+            <div className="md:col-span-2">
               <h4 className="text-secondary-foreground/40">Contact</h4>
               <ul className="mt-4 space-y-1">
-                <li className="text-base md:text-lg">
+                <li>
                   <h5 className="text-secondary-foreground/60 text-xs md:text-sm">Mobile:</h5>
                   <Link className="font-medium" href={"tel:+919633211248"}>
                     +91 96332 11248
                   </Link>
                 </li>
-                <li className="text-base md:text-lg">
+                <li>
                   <h5 className="text-secondary-foreground/60 text-xs md:text-sm">Email:</h5>
                   <Link className="font-medium" href={"mailto:info@smartkitchen.store"}>
                     info@smartkitchen.store
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-secondary-foreground/40">Legal</h4>
+              <ul className="mt-4 space-y-1">
+                <li>
+                  <Link className="font-medium" href={"/legal/privacy-policy"}>
+                    <h5>Privacy Policy</h5>
+                  </Link>
+                </li>
+                <li>
+                  <Link className="font-medium" href={"/legal/refund-policy"}>
+                    <h5>Refund Policy</h5>
+                  </Link>
+                </li>
+                <li>
+                  <Link className="font-medium" href={"/legal/shipping-policy"}>
+                    <h5>Shipping Policy</h5>
                   </Link>
                 </li>
               </ul>
@@ -82,6 +102,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
+
       <LogoMark className="-translate-x-1/2 absolute bottom-0 left-1/2 h-auto max-sm:w-full" />
     </footer>
   );

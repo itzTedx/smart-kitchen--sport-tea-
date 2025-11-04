@@ -4,9 +4,8 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  typedRoutes: true,
+  reactCompiler: true,
 
   logging: {
     fetches: {
@@ -28,6 +27,7 @@ const nextConfig: NextConfig = {
     formats: ["image/webp", "image/avif"],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
+    qualities: [75, 85, 100],
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 };
