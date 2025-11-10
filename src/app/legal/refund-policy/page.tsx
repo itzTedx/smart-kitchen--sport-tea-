@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Refund Policy | Sport Tea",
+  title: "Refund Policy | Smart Kitchen",
   description: "All sales are final. No returns and no refunds.",
 };
 
@@ -24,7 +24,7 @@ export default function RefundPolicyPage() {
         <p className="text-muted-foreground">
           If your order arrives damaged, defective, or incorrect, contact us within 48 hours of delivery with your order
           number and clear photos of the issue. We will review your case and work with you to make it right when
-          applicable.
+          applicable. Your order will be exchanged and replacement will be delivered within 7 days.
         </p>
       </section>
 

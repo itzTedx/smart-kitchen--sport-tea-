@@ -57,6 +57,11 @@ export const Footer = () => {
               <h4 className="text-secondary-foreground/40">Legal</h4>
               <ul className="mt-4 space-y-1">
                 <li>
+                  <Link className="font-medium" href={"/legal/terms-of-service"}>
+                    <h5>Terms of Service</h5>
+                  </Link>
+                </li>
+                <li>
                   <Link className="font-medium" href={"/legal/privacy-policy"}>
                     <h5>Privacy Policy</h5>
                   </Link>
@@ -78,7 +83,7 @@ export const Footer = () => {
             <h5 className="text-secondary-foreground/40 text-xs md:text-sm">
               2025 © Copyright
               <br />
-              Sport Tea LLC.
+              Smart Kitchen LLC.
             </h5>
             <p className="text-end text-secondary-foreground/40 text-xs md:text-center">
               Website designed & <br />

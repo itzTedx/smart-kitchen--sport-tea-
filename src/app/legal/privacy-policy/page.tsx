@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Privacy Policy | Sport Tea",
-  description: "Learn how Sport Tea LLC collects, uses, and protects your personal information.",
+  title: "Privacy Policy | Smart Kitchen",
+  description: "Learn how Smart Kitchen LLC collects, uses, and protects your personal information.",
 };
 
 const lastUpdated = "November 4, 2025";
@@ -14,9 +14,9 @@ export default function PrivacyPolicyPage() {
       <p className="mt-3 text-muted-foreground">Last Updated on: {lastUpdated}</p>
 
       <p className="mt-8 text-base text-muted-foreground leading-7">
-        This Privacy Policy explains how Sport Tea LLC ("Sport Tea", "we", "us", or "our") collects, uses, discloses,
-        and safeguards your information when you visit our website, make a purchase, or otherwise interact with us. By
-        using our services, you agree to the terms of this policy.
+        This Privacy Policy explains how Smart Kitchen LLC ("Smart Kitchen", "we", "us", or "our") collects, uses,
+        discloses, and safeguards your information when you visit our website, make a purchase, or otherwise interact
+        with us. By using our services, you agree to the terms of this policy.
       </p>
 
       <section className="mt-10 space-y-4">

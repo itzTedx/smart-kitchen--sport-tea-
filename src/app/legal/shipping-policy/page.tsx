@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Shipping Policy | Sport Tea",
+  title: "Shipping Policy | Smart Kitchen",
   description: "Learn about processing times, delivery estimates, shipping rates, and order issues.",
 };
 
@@ -37,8 +37,9 @@ export default function ShippingPolicyPage() {
       <section className="mt-10 space-y-4">
         <h2 className="font-semibold text-2xl">Estimated Delivery Timeframes</h2>
         <p className="text-muted-foreground">
-          Delivery estimates are provided at checkout and vary by location and shipping method. Once your order has
-          shipped, the carrier assumes responsibility for delivery and timing.
+          Your order will be delivered within 7 to 15 days. Delivery estimates are provided at checkout and vary by
+          location and shipping method. Once your order has shipped, the carrier assumes responsibility for delivery and
+          timing.
         </p>
       </section>
 
@@ -66,8 +67,8 @@ export default function ShippingPolicyPage() {
             carrier. In some cases, carriers may mark packages delivered up to 24 hours before arrival.
           </li>
           <li>
-            For packages lost in transit, contact us within 7 days of the last tracking update so we can investigate
-            with the carrier.
+            For packages lost in transit, contact us within 7 to 15 days of the last tracking update so we can
+            investigate with the carrier.
           </li>
           <li>
             We are not responsible for packages after they are confirmed delivered by the carrier. Replacement decisions

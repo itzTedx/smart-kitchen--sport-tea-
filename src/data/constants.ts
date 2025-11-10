@@ -24,7 +24,7 @@ const createNavItem = (label: string, href?: string) => ({
 
 export const BREWING_STEPS = [
   createStep(1, "Boil 240 ml of fresh water"),
-  createStep(2, "Add 1 teaspoon of Sport Tea"),
+  createStep(2, "Add 1 teaspoon of Smart Kitchen"),
   createStep(3, "Cover and steep for 2–3 minutes"),
   createStep(4, "Inhale aroma, add milk/sugar if desired"),
   createStep(5, "Sip hot or pour over ice"),
@@ -33,8 +33,8 @@ export const BREWING_STEPS = [
 export const FAQS = [
   createFAQ(
     "01",
-    "What is the best way to brew Sport Tea?",
-    "The best way to brew Sport Tea is to boil 240 ml of fresh water, add 1 teaspoon of Sport Tea, cover and steep for 2–3 minutes, inhale aroma, add milk/sugar if desired, and sip hot or pour over ice."
+    "What is the best way to brew Smart Kitchen?",
+    "The best way to brew Smart Kitchen is to boil 240 ml of fresh water, add 1 teaspoon of Smart Kitchen, cover and steep for 2–3 minutes, inhale aroma, add milk/sugar if desired, and sip hot or pour over ice."
   ),
   createFAQ("02", "Are your teas organic?", "Yes, all our teas are 100% certified organic and pesticide-free."),
   createFAQ("03", "Do you ship across India?", "Yes, we offer nationwide delivery. Orders over ₹500 ship free."),

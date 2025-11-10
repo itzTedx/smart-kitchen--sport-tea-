@@ -23,7 +23,7 @@ export const Navbar = () => {
     <nav className="container sticky top-0 z-999 flex max-w-3xl items-center justify-between border-white border-b bg-white/70 p-2 backdrop-blur-xl md:top-3 md:rounded-md">
       <Link className="flex items-center gap-3" href="/">
         <Logo />
-        <span className="sr-only font-semibold font-suisse">Sport Tea</span>
+        <span className="sr-only font-semibold font-suisse">Smart Kitchen</span>
       </Link>
 
       {/* Desktop Navigation */}
@@ -70,7 +70,7 @@ export const Navbar = () => {
             <div className="flex flex-col gap-6 pt-6">
               <SheetTitle className="flex items-center gap-3">
                 <Logo />
-                <span className="font-semibold font-suisse">Sport Tea</span>
+                <span className="font-semibold font-suisse">Smart Kitchen</span>
               </SheetTitle>
               <nav>
                 <ul className="flex flex-col gap-2 font-medium">

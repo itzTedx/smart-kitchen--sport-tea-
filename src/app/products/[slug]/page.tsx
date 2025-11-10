@@ -32,11 +32,11 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   }
 
   return {
-    title: `${product.title} - Sport Tea`,
+    title: `${product.title} - Smart Kitchen`,
     description: product.overview.substring(0, 160),
     keywords: [
       "tea",
-      "sport tea",
+      "smart kitchen",
       "herbal tea",
       "wellness",
       "health",
@@ -82,7 +82,7 @@ function generateStructuredData(product: Product) {
     category: "Tea",
     brand: {
       "@type": "Brand",
-      name: "Sport Tea",
+      name: "Smart Kitchen",
     },
   };
 }

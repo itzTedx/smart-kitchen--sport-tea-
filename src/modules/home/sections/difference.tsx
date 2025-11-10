@@ -26,7 +26,7 @@ export function SmartKitchenDifference() {
         </h2>
         <div className="mt-6 block space-y-3 text-balance text-lg text-secondary-muted leading-relaxed sm:mt-8 md:tracking-tight lg:text-xl">
           <p>
-            At Sport Tea, we believe tea isn&apos;t just a beverage - it&apos;s a ritual of wellness, focus, and
+            At Smart Kitchen, we believe tea isn&apos;t just a beverage - it&apos;s a ritual of wellness, focus, and
             comfort. Whether you&apos;re starting your morning or winding down in the evening, our handcrafted blends
             bring balance and refreshment to every moment.
           </p>
