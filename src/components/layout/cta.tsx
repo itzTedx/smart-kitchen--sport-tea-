@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { IconArrowRight } from "@/assets/icons/arrows";
 
 import { Button } from "../ui/button";
@@ -13,11 +15,13 @@ export const Cta = () => {
           <p className="mb-4 text-center text-base text-secondary-muted sm:text-lg">
             Choose a product that suits your vibe - calming, energizing, spicy, or soothing.
           </p>
-          <Button className="mx-auto text-sm sm:text-base">
-            Talk to our experts
-            <div className="flex size-8 items-center justify-center rounded-md bg-white sm:size-9 lg:size-10">
-              <IconArrowRight className="size-4 text-secondary sm:size-5" />
-            </div>
+          <Button asChild className="mx-auto text-sm sm:text-base">
+            <Link href="/contact">
+              Talk to our experts
+              <div className="flex size-8 items-center justify-center rounded-md bg-white sm:size-9 lg:size-10">
+                <IconArrowRight className="size-4 text-secondary sm:size-5" />
+              </div>
+            </Link>
           </Button>
         </div>
         <div className="absolute inset-0 z-2 h-full w-full bg-[linear-gradient(to_right,hsla(0,0%,100%,0.65)_1px,transparent_1px),linear-gradient(to_bottom,hsla(0,0%,100%,0.1)_1px,transparent_1px)] bg-[size:25px_25px]" />

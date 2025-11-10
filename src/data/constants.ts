@@ -1,3 +1,5 @@
+import { Route } from "next";
+
 // Helper function to create step objects
 const createStep = (stepNumber: number, description: string) => ({
   title: `Step ${stepNumber}`,
@@ -17,7 +19,7 @@ const createFooterSection = (heading: string) => ({
 });
 
 // Helper function to create navigation menu items
-const createNavItem = (label: string, href?: string) => ({
+const createNavItem = (label: string, href?: Route) => ({
   label,
   href: href ?? null,
 });
@@ -47,5 +49,5 @@ export const FOOTER = [createFooterSection("Products")];
 export const NAV_LINKS = [
   createNavItem("Products", "/products"),
   createNavItem("About", "/#about"),
-  createNavItem("Contact"),
+  createNavItem("Contact", "/contact"),
 ];

@@ -140,6 +140,14 @@ function FieldDescription({ className, ...props }: React.ComponentProps<"p">) {
   );
 }
 
+function FieldLabelAsterisk({ className, ...props }: React.ComponentProps<"span">) {
+  return (
+    <span className={cn("text-destructive", className)} data-slot="field-label-asterisk" {...props}>
+      *
+    </span>
+  );
+}
+
 function FieldSeparator({
   children,
   className,
@@ -216,6 +224,7 @@ function FieldError({
 export {
   Field,
   FieldLabel,
+  FieldLabelAsterisk,
   FieldDescription,
   FieldError,
   FieldGroup,
