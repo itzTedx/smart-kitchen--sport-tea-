@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
       <p className="mt-3 text-muted-foreground">Last Updated on: {lastUpdated}</p>
 
       <p className="mt-8 text-base text-muted-foreground leading-7">
-        This Privacy Policy explains how Smart Kitchen LLC ("Smart Kitchen", "we", "us", or "our") collects, uses,
+        This Privacy Policy explains how MR MOHAMMED UVAIS ("Smart Kitchen", "we", "us", or "our") collects, uses,
         discloses, and safeguards your information when you visit our website, make a purchase, or otherwise interact
         with us. By using our services, you agree to the terms of this policy.
       </p>

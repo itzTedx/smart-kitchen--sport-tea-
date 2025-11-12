@@ -9,7 +9,7 @@ import { Button } from "../ui/button";
 
 export const Footer = () => {
   return (
-    <footer className="relative">
+    <footer className="relative overflow-hidden">
       <div className="container relative z-10 grid max-w-7xl grid-cols-1 gap-8 py-16 md:grid-cols-3 md:gap-4 md:py-32">
         <div className="md:w-fit">
           <Logo />

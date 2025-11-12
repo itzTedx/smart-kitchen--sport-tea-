@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { IconBrain } from "@/assets/icons/brain";
 import { IconLeaf } from "@/assets/icons/leaf";
 import { IconLocationPin } from "@/assets/icons/location-pin";
@@ -87,15 +89,18 @@ export const HomeFeatures = () => {
             </div>
             <Button
               aria-label="Contact our tea experts for personalized recommendations"
+              asChild
               className="w-full gap-2 md:w-auto md:gap-4"
             >
-              Talk to our expert{" "}
-              <div
-                aria-hidden="true"
-                className="flex size-8 items-center justify-center rounded-md bg-white md:size-10"
-              >
-                <IconShoppingCart className="size-4 text-secondary md:size-5" />
-              </div>
+              <Link href="/contact">
+                Talk to our expert{" "}
+                <div
+                  aria-hidden="true"
+                  className="flex size-8 items-center justify-center rounded-md bg-white md:size-10"
+                >
+                  <IconShoppingCart className="size-4 text-secondary md:size-5" />
+                </div>
+              </Link>
             </Button>
           </article>
         </div>
